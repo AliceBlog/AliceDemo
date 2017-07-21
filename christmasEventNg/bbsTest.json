@@ -1,0 +1,438 @@
+{"page": 1,
+	"total": 509,
+	"rows":
+[
+    {
+        "id": "564e8d34e4b07e6a3ae4fc6b",
+        "resQtrId": 1,
+        "resQtrName": "聚比特大厦",
+        "title": "测试测试测试啊",
+        "writtenDate": 1447988532803,
+        "lastReply": 1448182335047,
+        "contents": [
+            {
+                "userId": 0,
+                "contentId": "9be9bb3f-8ae8-49ae-8dde-2d481c8b3623",
+                "content": "天哦我死啦额哦就外婆饿了你在双流本替我跟进去海尔mix马恩随意了阿狸巴巴爸爸吧calm那份XP卡恩洗了恶习自己就随你爱就哦我死啦额哦就外婆饿了你在双流本替我跟进去海尔mix马恩随意了阿狸巴巴爸爸吧calm那份XP卡恩洗了恶习自己就随你爱就破破哦我死啦额哦就外婆饿了你在双流本替我跟进去海尔mix马恩随意了阿狸巴巴爸爸吧calm那份XP卡恩洗了恶习自己就随你爱就破哦我死啦额哦就外婆饿了你在双流本替我跟进去海尔mix马恩随意了阿狸巴巴爸爸吧calm那份XP卡恩洗了恶习自己就随你爱就破哦我死啦额哦就外婆饿了你在双流本替我跟进去",
+                "medias": [
+                    {
+                        "id": "ac62cf65-1ea5-4491-8916-9f40818fb7fd",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988531381.jpg",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988531381_s.jpg"
+                    },
+                    {
+                        "id": "fc4e6113-1b33-40bd-8bf7-9d82faf21326",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988531709.webp",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988531709_s.webp"
+                    },
+                    {
+                        "id": "f9f69c07-3559-4386-b7b6-6fb9cef6c79d",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988532349.jpg",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988532349_s.jpg"
+                    },
+                    {
+                        "id": "fb5f7d6f-5b8e-41d9-9e63-0fb9f390ac7c",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988531263.jpg",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988531263_s.jpg"
+                    },
+                    {
+                        "id": "280561cf-3631-4be1-a9c3-7f9ca59765ff",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988531472.webp",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988531472_s.webp"
+                    },
+                    {
+                        "id": "3a990a25-346c-44a3-a236-c320a87a7791",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988531847.jpg",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988531847_s.jpg"
+                    },
+                    {
+                        "id": "c4ae4da8-7df0-4100-b605-1b3d252bad57",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988532315.jpg",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988532315_s.jpg"
+                    },
+                    {
+                        "id": "1abe77b8-125b-4cb8-9a66-453830dfcf3d",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988532038.jpg",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988532038_s.jpg"
+                    },
+                    {
+                        "id": "246aa4c5-4970-449f-b41f-8dc68aefc426",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988532522.png",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/575//1447988532522_s.png"
+                    }
+                ],
+                "writtenDate": 1447988532803
+            }
+        ],
+        "userId": 575,
+        "userName": "小黄鹅",
+        "userPhotoIcon": "http://jucmweb.suning.com.cn/file/1/2015/09/06/photo_icon/1441540089408_m",
+        "hits": 42,
+        "shareHits": 0,
+        "hotScore": 805,
+        "replys": [
+            {
+                "id": "e3125c43-f777-4ed2-84a2-6a78d876c698",
+                "commentToId": "564e8d34e4b07e6a3ae4fc6b",
+                "content": "啊",
+                "userId": 575,
+                "userName": "ceshi",
+                "userPhotoIcon": "http://jucmweb.suning.com.cn/file/1/2015/09/06/photo_icon/1441540089408_m",
+                "commentToUserId": 0,
+                "replyDate": 1447989918281,
+                "status": 1
+            },
+            {
+                "id": "a1828cdc-1a66-4ee3-830a-2ccaa11b1754",
+                "commentToId": "e3125c43-f777-4ed2-84a2-6a78d876c698",
+                "content": "阿伦",
+                "userId": 575,
+                "userName": "ceshi",
+                "userPhotoIcon": null,
+                "commentToUserId": 575,
+                "replyDate": 1447989958512,
+                "status": 1
+            },
+            {
+                "id": "ef7f0bad-1ecd-431c-b76a-bb1a1762ea1f",
+                "commentToId": "a1828cdc-1a66-4ee3-830a-2ccaa11b1754",
+                "content": "目送",
+                "userId": 575,
+                "userName": "ceshi1",
+                "userPhotoIcon": null,
+                "commentToUserId": 575,
+                "replyDate": 1447989964667,
+                "status": 1
+            },
+            {
+                "id": "99037e47-4fb5-4cd7-a20e-5e3dc0deb078",
+                "commentToId": "a1828cdc-1a66-4ee3-830a-2ccaa11b1754",
+                "content": "欧耶",
+                "userId": 575,
+                "userName": "ceshi2",
+                "userPhotoIcon": null,
+                "commentToUserId": 575,
+                "replyDate": 1447989968807,
+                "status": 1
+            },
+            {
+                "id": "a85df44d-f225-4099-a498-6965cb692273",
+                "commentToId": "564e8d34e4b07e6a3ae4fc6b",
+                "content": "啦",
+                "userId": 575,
+                "userName": "ceshi",
+                "userPhotoIcon": null,
+                "commentToUserId": 0,
+                "replyDate": 1447989923675,
+                "status": 1
+            },
+            {
+                "id": "ab260a77-e347-497f-a22e-5f5626872a5e",
+                "commentToId": "a85df44d-f225-4099-a498-6965cb692273",
+                "content": "1",
+                "userId": 1,
+                "userName": "ceshi",
+                "userPhotoIcon": null,
+                "commentToUserId": 575,
+                "replyDate": 1448009429760,
+                "status": 1
+            },
+            {
+                "id": "ece97aef-57e5-4445-b5b0-fe3f4923917e",
+                "commentToId": "564e8d34e4b07e6a3ae4fc6b",
+                "content": "的",
+                "userId": 575,
+                "userName": "ceshi",
+                "userPhotoIcon": null,
+                "commentToUserId": 0,
+                "replyDate": 1447989927148,
+                "status": 1
+            },
+            {
+                "id": "3b7e2964-7320-4eca-9d95-1c3724d91fdc",
+                "commentToId": "564e8d34e4b07e6a3ae4fc6b",
+                "content": "我哭",
+                "userId": 575,
+                "userName": "ceshi",
+                "userPhotoIcon": null,
+                "commentToUserId": 0,
+                "replyDate": 1447989931094,
+                "status": 1
+            },
+            {
+                "id": "b6c0fdee-0647-4f7d-9938-7249f7d34a1c",
+                "commentToId": "3b7e2964-7320-4eca-9d95-1c3724d91fdc",
+                "content": "哦越来",
+                "userId": 575,
+                "userName": "ceshi",
+                "userPhotoIcon": null,
+                "commentToUserId": 575,
+                "replyDate": 1447989974275,
+                "status": 1
+            },
+            {
+                "id": "1d3f0ecd-ef3e-4d25-b101-d6bc6a108427",
+                "commentToId": "564e8d34e4b07e6a3ae4fc6b",
+                "content": "靠谱",
+                "userId": 575,
+                "userName": "ceshi",
+                "userPhotoIcon": null,
+                "commentToUserId": 0,
+                "replyDate": 1447989936249,
+                "status": 2
+            },
+            {
+                "id": "7b8249f5-922b-4845-bd8b-73134719367c",
+                "commentToId": "564e8d34e4b07e6a3ae4fc6b",
+                "content": "么么",
+                "userId": 575,
+                "userName": "ceshi",
+                "userPhotoIcon": null,
+                "commentToUserId": 0,
+                "replyDate": 1447989940319,
+                "status": 2
+            },
+            {
+                "id": "bc76804b-bcd8-46c9-9114-6c7ce9a55d0d",
+                "commentToId": "564e8d34e4b07e6a3ae4fc6b",
+                "content": "有了",
+                "userId": 575,
+                "userName": "ceshi",
+                "userPhotoIcon": null,
+                "commentToUserId": 0,
+                "replyDate": 1447989944109,
+                "status": 1
+            },
+            {
+                "id": "f09a2222-d29b-49e9-943d-c1afe2ce7db2",
+                "commentToId": "564e8d34e4b07e6a3ae4fc6b",
+                "content": "居然信了",
+                "userId": 575,
+                "userName": "ceshi",
+                "userPhotoIcon": null,
+                "commentToUserId": 0,
+                "replyDate": 1447989948890,
+                "status": 2
+            },
+            {
+                "id": "770cf563-a97c-4325-9601-9724c8e3eae1",
+                "commentToId": "f09a2222-d29b-49e9-943d-c1afe2ce7db2",
+                "content": "路我饿了岁mix",
+                "userId": 575,
+                "userName": "ceshi",
+                "userPhotoIcon": null,
+                "commentToUserId": 575,
+                "replyDate": 1447989983031,
+                "status": 2
+            },
+            {
+                "id": "86d4d44e-9958-42e1-a8e7-25339508640b",
+                "commentToId": "f09a2222-d29b-49e9-943d-c1afe2ce7db2",
+                "content": "夜路三姑",
+                "userId": 575,
+                "userName": "ceshi",
+                "userPhotoIcon": null,
+                "commentToUserId": 575,
+                "replyDate": 1447989989311,
+                "status": 2
+            },
+            {
+                "id": "556f2afb-ba0c-481b-8e1f-e678522363d2",
+                "commentToId": "f09a2222-d29b-49e9-943d-c1afe2ce7db2",
+                "content": "爬梯哦了也",
+                "userId": 575,
+                "userName": "ceshi",
+                "userPhotoIcon": null,
+                "commentToUserId": 575,
+                "replyDate": 1447989994572,
+                "status": 2
+            },
+            {
+                "id": "2a4705b8-1ab4-4caa-8f2b-553de77181a0",
+                "commentToId": "564e8d34e4b07e6a3ae4fc6b",
+                "content": "啊居然",
+                "userId": 575,
+                "userName": "ceshi",
+                "userPhotoIcon": null,
+                "commentToUserId": 0,
+                "replyDate": 1447989952846,
+                "status": 1
+            },
+            {
+                "id": "bcb27a9a-1212-4392-b975-924f5646770b",
+                "commentToId": "2a4705b8-1ab4-4caa-8f2b-553de77181a0",
+                "content": "Jbj",
+                "userId": 596,
+                "userName": "ceshi",
+                "userPhotoIcon": null,
+                "commentToUserId": 575,
+                "replyDate": 1448182334753,
+                "status": 1
+            },
+            {
+                "id": "b7c770b5-b55e-4540-a235-fc009eb0cd18",
+                "commentToId": "564e8d34e4b07e6a3ae4fc6b",
+                "content": "体会力量",
+                "userId": 568,
+                "userName": null,
+                "userPhotoIcon": null,
+                "commentToUserId": 0,
+                "replyDate": 1448011925395,
+                "status": 1
+            }
+        ],
+        "praises": [
+            {
+                "id": "98ee3bcf-3708-417b-b829-2c4b1d1e1d22",
+                "userId": 575,
+                "userName": null,
+                "praiseDate": 1447990060045
+            }
+        ],
+        "oppositions": null,
+        "remindUids": null,
+        "excludeUids": null,
+        "status": 1,
+        "catalogIds": [
+            "5624aa524db2f86969b830b9"
+        ]
+    },
+    {
+        "id": "564e7b494db26c4e124e14f9",
+        "resQtrId": 1,
+        "resQtrName": "聚比特大厦",
+        "title": "wewetwetwe twe t ",
+        "writtenDate": 1447983945786,
+        "lastReply": null,
+        "contents": [
+            {
+                "userId": 1,
+                "contentId": "93c8b644-9c11-4207-a211-79a2d3be41bf",
+                "content": "we twetwet wetew",
+                "medias": [
+                    {
+                        "id": "0f4bf079-4dfd-43b4-8e30-214e7862a85d",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/re5Bj04MtiWgzF89",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/re5Bj04MtiWgzF89"
+                    },
+                    {
+                        "id": "bfe7aaa3-2088-490c-9f49-4a3c76712922",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/VmzOcqHoHLU3gUo8",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/VmzOcqHoHLU3gUo8"
+                    },
+                    {
+                        "id": "d32a5907-3237-4382-a57c-9deb759af243",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/EOZIhmTAFZLcBvHq",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/EOZIhmTAFZLcBvHq"
+                    },
+                    {
+                        "id": "22aa330c-7d86-4a81-88ff-cde9d1d2ca08",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/jtrSxYF9z6ZzMu2h",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/jtrSxYF9z6ZzMu2h"
+                    },
+                    {
+                        "id": "59ffb2a4-57c9-4d4d-aa37-7d9c259873b4",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/TVAmQTLRWrEi6e9a",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/TVAmQTLRWrEi6e9a"
+                    },
+                    {
+                        "id": "3a3d73c9-f80d-4b03-96e2-97da224ac944",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/OS5cPZbDf0ER4IV8",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/OS5cPZbDf0ER4IV8"
+                    },
+                    {
+                        "id": "490ffe64-4fa6-4167-8e3f-a7b6370763df",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/fwzcQbgtA8mu9alX",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/fwzcQbgtA8mu9alX"
+                    },
+                    {
+                        "id": "3bbd9ef7-68a4-4804-9dca-023740c51e30",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/nrrajZQl1HPo0sUE",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/nrrajZQl1HPo0sUE"
+                    },
+                    {
+                        "id": "f461b126-4eab-42e8-a3ef-5628f280b999",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/GI28UaYiWOegRbDa",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/GI28UaYiWOegRbDa"
+                    },
+                    {
+                        "id": "98c44780-9b4f-47be-96c4-71eb93ce2255",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/F8ZizXs46iMzXhGn",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/F8ZizXs46iMzXhGn"
+                    },
+                    {
+                        "id": "ec7bd628-73bf-4eeb-b967-7ef478250c7f",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/iHwU6sl1A33jMbkS",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/iHwU6sl1A33jMbkS"
+                    },
+                    {
+                        "id": "6fd22d2a-20a3-4a7d-a34c-12923c0955c8",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/SD7TxC1KJINsnRBw",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/SD7TxC1KJINsnRBw"
+                    },
+                    {
+                        "id": "6d4b0d58-fbdd-4e50-ba06-9afb77cffa2c",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/zdnfeuZZH8VIDdrK",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/zdnfeuZZH8VIDdrK"
+                    },
+                    {
+                        "id": "5dd2a7b8-3d84-4f98-a9d0-17b8d5d19b56",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/EkFlFQTQXHbazpn7",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/EkFlFQTQXHbazpn7"
+                    },
+                    {
+                        "id": "c26d6e68-b81f-4b45-b73e-11b90e9eaa6c",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/9Su15eMFKch7nrHr",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/9Su15eMFKch7nrHr"
+                    },
+                    {
+                        "id": "5dd3f641-bd0e-4de5-b332-d93ff6c9335a",
+                        "mediaType": 1,
+                        "content": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/iHwnArzpcWO2OGet",
+                        "smallIcon": "http://jucmweb.suning.com.cn/file/bbs/2015/11/20/1/iHwnArzpcWO2OGet"
+                    }
+                ],
+                "writtenDate": 1447983945786
+            }
+        ],
+        "userId": 1,
+        "userName": "管理员",
+        "userPhotoIcon": "http://jucmweb.suning.com.cn/file/1/2015/09/06/photo_icon/1441540089408_m",
+        "hits": 7,
+        "shareHits": 0,
+        "hotScore": 30,
+        "replys": null,
+        "praises": null,
+        "oppositions": null,
+        "remindUids": null,
+        "excludeUids": null,
+        "status": 1,
+        "catalogIds": [
+            "5632e194e4b008b90265740e"
+        ]
+    }
+]}

@@ -1,0 +1,38 @@
+{
+    "houseGolds": [
+        {
+            "householdsId": 6,
+            "housegolds": 30,
+            "resqtrname": "聚比特大厦1栋106"
+        },
+        {
+            "householdsId": 36,
+            "housegolds": 30,
+            "resqtrname": "天华硅谷3栋108"
+        },
+        {
+            "householdsId": 221,
+            "housegolds": 30,
+            "resqtrname": "聚比特大厦8栋905"
+        },
+        {
+            "householdsId": 43,
+            "housegolds": 30,
+            "resqtrname": "聚比特大厦1栋603"
+        },
+        {
+            "householdsId": 109,
+            "housegolds": 30,
+            "resqtrname": "聚比特大厦8栋301"
+        },
+        {
+            "householdsId": 126,
+            "housegolds": 30,
+            "resqtrname": "聚比特大厦7栋906"
+        }
+    ],
+    "days": 30,
+    "todaysignup": true,
+    "today": 11,
+    "conDays": 3
+}

@@ -1,0 +1,522 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>签到哎</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/signIn.css" /> 
+		<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+		<script src= "http://apps.bdimg.com/libs/angular.js/1.3.9/angular.min.js"></script>
+		<script language="javascript">
+			//本月的总天数
+			days = {
+				day: "31"
+			};
+//			alert(days.length);
+			 //连续签到的天数
+			conDays = {
+				conDays: "5"
+			};
+			 //家庭的总金币数
+			goldNum = [{
+				goldNum: "50",
+				name:"威尼斯水城15街区5栋203"
+			},{
+				goldNum: "100",
+				name:"威尼斯水城15街区6栋604"
+			},{
+				goldNum: "70",
+				name:"威尼斯水城14街区2栋402"
+			}];
+			 //是否签到
+			sign = {
+				sign: false
+				}
+				//用户的签到信息
+			value = [{
+				day: "1",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "3",
+				prize: "优惠劵",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "4",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "6",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "7",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false,
+				today: true
+			}, {
+				day: "8",
+				prize: "实物",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "9",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "10",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "11",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "12",
+				prize: "奖品",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "13",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "14",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "15",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "16",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "17",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "18",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "19",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "20",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "21",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "22",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "23",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "24",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "25",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "26",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "27",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "28",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "29",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "30",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}, {
+				day: "31",
+				prize: "积分",
+				icon: "img/coin.png",
+				sign: false
+			}];
+		</script>
+		<body>
+			<!--首页-->
+			<div class="index_page">
+				<div class="window_index"><div class="choose_window">
+					<div class="window_title">请选择您的所在小区</div>
+					<div class="window_content"></div>
+				</div></div>
+			<header>
+				<!--<img src="img/top_look.png" class="top_look" />-->
+				<img src="img/title.png" class="title" />
+				<img src="img/balloon.png" class="balloon" />
+			</header>
+			<div id="continu_days">已签到<font class="number_color"></font>天</div>
+			<img src="img/inger.png" class="inger" />
+			<div class="Calendar">
+				<div id="communityTitle"></div>
+				<div class="gold_number"><font class="gold_number_1">已获得:</font><font class="gold_number_2">20</font><font class="gold_number_3">聚金币</font><img class="gold_number_img" src="img/pn_coin.png" /></div>
+				<table>
+					<tbody id="idCalendar">
+						<script>
+							var screen_width = parseInt($("body").width());
+							var html = "";
+							var tr = 0;
+							var tem = 7;
+							var all_tr = 7;
+							for (var i = 0; i < days.day; i++) {
+								tr = i;
+								if (tr == all_tr || tr == 0) {
+									html += "<tr>";
+								}
+								if (tr <= all_tr || tr == 0) {
+									j = i + 1;
+									html += "<td id=prize" + i + "><div class='days'>" + j + "</div><div class='tr_box'><div class='sign_right' style='background-image: url(img/coin_del.png);'></div></div></td>";
+								}
+								if (tr == all_tr - 1) {
+									all_tr += tem;
+									html += "</tr>";
+								}
+							}
+							document.write(html);
+							var sign_start = true;
+							var m = 0;
+							var n = 0;
+							for (var i = 0; i < value.length; i++) {
+								if (value[i].today == true) {
+									m = value[i].day - 1;
+									n = i;
+									/*
+									 *点击签到事件--------签到成功要写ajax
+									 *
+									 * */
+									$("#prize" + m).click(function() {
+										if (sign.sign == true) {
+											alert("今天您已签过到，明天再来吧");
+										} else {
+											if (sign_start == true) {
+												//											alert("签到成功" + value[n].prize);
+												$("#prize" + m + " .sign_right").html("<img src='img/di_icon.png'/>");
+												$(".sign_right img").css("width", parseInt($('table').css("width")) / tem * 0.4 + "px");
+												$('body').append("<div id='animate' style='position: absolute;width: 80%;opacity:0;text-align: center;left: 10%;z-index: 20;'>恭喜您获得：" + value[n].prize + "</div>");
+												$(".gold_number_2").html(""); //这里需要写当天金币的数量
+												$(".number_color").html(""); //这里需要重新写连续签到数
+												$("#animate").animate({
+														top: '80%',
+														opacity: 0
+													}, "0")
+													.animate({
+														top: '70%',
+														opacity: 1
+													}, 1000)
+													.animate({
+														top: '70%',
+														opacity: 1
+													}, 1500)
+													.animate({
+														top: '60%',
+														opacity: 0
+													}, 1000);
+												sign_start = false;
+											} else {
+												alert("已经签到完成，请勿重复签到");
+											}
+										}
+									})
+								}
+							}
+							var pre_day = true;
+							var continu_days = 0;
+							for (var i = 0; i < value.length; i++) {
+								j = value[i].day - 1;
+								$("#prize" + j + " .sign_right").html("");
+								$("#prize" + j + " .sign_right").css("background-image", "url(" + value[i].icon + ")");
+								if (value[i].today == true) {
+									pre_day = false;
+								}
+								if (pre_day == true) {
+									$("#prize" + j + " .sign_right").html("<img src='img/di_icon.png'/>");
+								}
+							}
+							$("#continu_days font").html(continu_days);
+						</script>
+						<div></div>
+					</tbody>
+				</table>
+
+			</div>
+			<div class="rule_title">活动规则</div>
+			<div class="rule">
+				<div><span class="way_icon">1</span>签到首日可领5个聚金币，连续两日可获10个，三日15个，以此类推，每天最多可获25个聚金币；</div>
+				<div><span class="way_icon">2</span>聚金币按家庭金币数可以兑换相应的礼品；</div>
+				<div><span class="way_icon">3</span>同一账户连续签到10天可获水杯一个、连续签到20天可获电影票一张、30天可获抱枕一个；</div>
+				<div><span class="way_icon">4</span>签到计天按自然月清空（金币数不清零），漏签、断签需重新签到；</div>
+				<div><span class="way_icon">5</span>同一账户每月同一连续签到礼品限领一次。</div>
+
+			</div>
+			<div class="prize_look">我的礼品</div>
+			<div class="convert">兑换中心</div>
+			<div class="way_introduce">
+				<div class="way_text">
+					<h3>领奖方式</h3> 1.“卫岗天天顶5元现金券”在通过一家订购卫岗牛奶时抵现金使用。通过系统“消息通知”发送优惠序列号至个人。
+					<br /> 2.“筷勺叉礼盒”、“电影票”可在物业处领取。
+					<br /> 3.“30元手机话费”将在你中奖后的7日之内充至一家登录手机号。
+					<br /> 4.“100元苏果卡”将在你中奖后的7日之内邮寄至一家认证地址。
+					<br />
+				</div>
+			</div>
+			</div>
+			<!--查看礼品页面-->
+			<div class="seeGift">
+				<div class="foo">
+  <span class="letter" data-letter="礼">礼</span>
+  <span class="letter" data-letter="品">品</span>
+  <span class="letter" data-letter="君">君</span>
+  <span class="letter" data-letter="驾">驾</span>
+  <span class="letter" data-letter="到">到</span>
+
+</div>
+<div class="sign_prize_title">我已获得的奖品：</div>
+
+<div class="sign_prize_list">
+ <div class="event">
+  <span>1</span>
+  <div class="info">
+    30元手机话费 <br />
+   2015.11.4
+  </div>
+  <div class="price">
+    签到
+  </div>
+</div>
+<div class="event">
+  <span>1</span>
+  <div class="info">
+    30元手机话费 <br />
+   2015.11.4
+  </div>
+  <div class="price">
+    签到
+  </div>
+</div>
+<div class="event">
+  <span>1</span>
+  <div class="info">
+    30元手机话费 <br />
+   2015.11.4
+  </div>
+  <div class="price">
+    签到
+  </div>
+</div>
+</div>
+<div class="sign_prize_title">我兑换的礼品:</div>
+<div class="convert_prize_list">
+<div class="event">
+  <span>2</span>
+  <div class="info">
+    水杯一个 <br />
+   2015.11.4
+  </div>
+  <div class="price">
+    兑换
+  </div>
+</div>
+<div class="event">
+  <span>2</span>
+  <div class="info">
+    水杯一个 <br />
+   2015.11.4
+  </div>
+  <div class="price">
+    兑换
+  </div>
+</div>
+<div class="event">
+  <span>2</span>
+  <div class="info">
+    水杯一个 <br />
+   2015.11.4
+  </div>
+  <div class="price">
+    兑换
+  </div>
+</div>
+
+</div>
+		<div class="return" id="return" >返回</div>
+			</div>
+			<!--兑换中心页面-->
+			<div class="convert_page">
+			 <img src="img/asr.png" class="convert_page_top"/>
+			 <img src="img/title_word.png" class="convert_page_title"/>
+			 
+    <img src="img/conin.png" class="convert_page_conin"/>
+    <div class="convert_page_num">
+    	<div>家庭聚金币总数：<font>xx聚金币</font></div>
+    </div>
+	<div class="convert_page_introduce">
+	   <div>问：什么是家庭聚金币总数?</div>
+	   <div>答：<font>指的是家庭所有成员签到所获得的金币总数，家庭金币总数可以兑换礼品。</font></div>
+	</div>
+	<div class="orge" style="background-image: url(img/orge.png);">兑换规则</div>	
+	<div  class="convert_page_list" ng-app="records" ng-controller="records"> 
+	<table ng-repeat="x in records">
+		<tr>
+			<td class="td_first">
+				<img ng-src="{{ x.icon }}" class="convert_list_img" />
+			</td>
+			<td class="td_second">
+				<div class="convert_list_title">{{ x.title }}</div>
+	  <div class="convert_list_glod_num">兑换币：{{ x.glodNum }}聚金币</div>
+	  <div class="convert_list_prize_num">剩余礼品数：{{ x.prizeNum }}个</div>
+			</td>
+			<td class="td_third" ng-click="recordsGo(x.glodNum,x.prizeNum)"><div class="convert_list_button">兑换</div></td>
+		</tr>
+	
+	</table>
+	</div>
+	<div class="convert_page_bottom">
+		<div class="convert_way">领奖方式</div>
+		<div class="convert_way_more">一家工作人员会定期去各个小区，已兑换的礼品可以现场进行领取，具体时间会在小区公告板中公示，请及时关注。</div>
+	</div>
+	<div class="return" id="return_" >返回</div>
+			</div>
+			
+		</body>
+		<script>
+			$(function() {
+				$(".prize_look").click(function(){
+					$(".index_page").css("display","none");
+					$(".seeGift").css("display","block");
+				});
+				
+				$(".convert").click(function(){
+					$(".index_page").css("display","none");
+					$(".convert_page").css("display","block");
+					
+				});
+				$(".way").click(function() {
+					$(".way_introduce").css("display", "block");
+				});
+				$(".way_introduce").click(function() {
+					$(".way_introduce").css("display", "none");
+				});
+			$("#return").click(function(){
+			$(".seeGift").css("display","none");
+			$(".index_page").css("display","block");
+				});
+			
+		$("#return_").click(function(){
+			$(".convert_page").css("display","none");
+			$(".index_page").css("display","block");
+			
+		});
+		
+			});
+			function showContent(j){
+				for (var i=0;i<goldNum.length;i++) {
+						if(i==j){
+						$(".gold_number_2").html(goldNum[i].goldNum);
+				        $("#communityTitle").html(goldNum[i].name);
+				        $("#communityTitle").append("<a style='color: #f8db39;' onclick='indexChange("+i+")'>切换</a>");
+						}
+						
+						
+					}
+				
+				$(".window_index").css("display","none");	
+			}
+			function indexChange(j){
+				$(".window_content div").remove();
+	for (var i=0;i<goldNum.length;i++) {
+		
+						if(i!=j){
+							
+							$(".window_content").append("<div style='margin-top: 3%;padding-bottom: 3%;border-bottom: 1px solid #ccc;'onclick='showContent("+i+")'>"+goldNum[i].name+"</div>");
+						}
+						
+						
+					}
+	$(".window_index").css("display","block");
+}
+			window.onload = function() {
+//				$(".gold_number_2").html(goldNum.goldNum);
+
+				if(goldNum.length>1){
+					
+					$(".gold_number_2").html(goldNum[0].goldNum);
+					$("#communityTitle").html(goldNum[0].name);
+					$("#communityTitle").append("<a style='color: #f8db39;' onclick='indexChange("+0+")'>切换</a>");
+				}else{
+					$("#communityTitle").html(goldNum[0].name);
+					$(".gold_number_2").html(goldNum[0].goldNum);
+				}
+				$(".number_color").html(conDays.conDays);
+				$(".tr_box").css("height", parseInt($("td").css("width")) * 0.8 + "px");
+				$(".sign_right img").css("width", parseInt($('table').css("width")) / tem * 0.4 + "px");
+				$("td").css("width", parseInt($('table').css("width")) / tem + "px");
+				$(".sign_right").css("height", parseInt($("td").css("width")) * 0.7 + "px");
+				window.onresize = function() {
+					$(".sign_right img").css("width", parseInt($('table').css("width")) / tem * 0.4 + "px");
+					$("td").css("width", parseInt($('table').css("width")) / tem + "px");
+					$(".tr_box").css("height", parseInt($("td").css("width")) * 0.8 + "px");
+					$(".sign_right").css("height", parseInt($("td").css("width")) * 0.7 + "px");
+				}
+			}
+		
+var records = angular.module('records', []);
+records.controller('records', function($scope, $http) {
+    $http.get("convert.json").success(function (response) {$scope.records = response.records;});
+     $scope.recordsGo=function(a,b){
+     	alert(a);
+     	alert(b);
+     };
+});
+
+		</script>
+
+</html>

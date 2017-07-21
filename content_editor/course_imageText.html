@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="studyEdit">
+<head>
+<meta charset="UTF-8">
+<title>一家场景编辑教程（图文）</title>
+<link rel="stylesheet" href="../../css/residential_qtr/course_imageText.css" />
+<link rel="stylesheet" href="../../css/residential_qtr/font/font.css" />
+<script type="text/javascript" src="../../js/jquery-1.8.0.min.js" ></script>
+<script type="text/javascript" src="../../js/angular.min.js" ></script>
+<script type="text/javascript" src="../../js/residential_qtr/course_imageText.js" ></script>
+</head>
+
+<body ng-controller="editctrl">
+	<!-- 场景编辑快捷键： <br /> ctrl+C：复制（仅限于小装饰和功能建筑）； <br />
+			ctrl+V：黏贴（黏贴前用鼠标点击一下需要黏贴的位置）； <br /> ctrl+X：剪切（仅限于小装饰和功能建筑）； <br />
+			ctrl+Z：向上一步； <br /> ctrl+Y：向后一步； <br /> ctrl+S：保存 <br />
+			鼠标选中物体（有白色边框）后： <br /> ↑：向上平移1像素 <br /> ↓：向下平移1像素 <br /> ←：向左平移1像素
+			<br /> →：向右平移1像素 <br /> delete：删除该物体 <br /> 预览中的快捷键使用： <br />
+			↑：向上平移1像素 <br /> ↓：向下平移1像素 <br /> ←：向左平移1像素 <br /> →：向右平移1像素 <br />
+			ctrl+↑、ctrl+“+”：放大0.5倍 <br /> ctrl+↓、ctrl+“-”：缩小0.5倍 <br /> -->
+<div class="navbar"><div class="navbarTitle">一家场景编辑器教程（图文）</div></div>
+<div class="leaf_nav">
+<div class="navBlock" ng-repeat="i in init">
+<div class="{{i.icon}} icon"></div>
+<a class="navTitle">{{i .name}}</a>
+<div class="product-wrap">
+<div class="wrap{{i.id}}">{{i .name}}</div>
+<div class="weapList" ng-repeat="j in i.childMenu" ng-click="changePage(j)"><span class="{{j.icon}} wrapText{{i.id}}"></span>&nbsp;{{j.name}}</div>
+</div>
+</div>
+</div>
+<iframe src="schemeSet.html" class="iframe"></iframe>
+<script type="text/javascript">
+$(function(){
+	$(".navBlock").mousemove(function(){
+		$(this).children(".product-wrap").show();
+	}).mouseleave(function(){
+		$(this).children(".product-wrap").hide();
+	})
+});
+</script>
+</body>
+
+</html>

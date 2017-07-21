@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>一家幸运抽奖</title>
+		<link rel="stylesheet" href="css/lottery.css" />
+		<script src="js/jquery-1.8.0.min.js"></script>
+		<script src="js/awardRotate.js"></script>
+		<!--[if IE]>
+    <script type="text/javascript" src="js/html5.js"></script>
+    <script type="text/javascript" src="js/excanvas.js"></script>
+<![endif]-->
+		<style>
+			body {
+				background-color: #41a7b2;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+		<div class="bg_title"><img src="img/top_bg.png" class="bg_img" />
+			<img src="img/color_bar.png" />
+		</div>
+		<!--转盘start-->
+		
+		<div class="turntable-bg">
+			<div class="banner">
+				
+				<div class="turnplate">
+					
+						
+					
+					<canvas class="item" id="wheelcanvas" width="422px" height="422px"></canvas>
+					
+				</div>
+				<div class="point_box">
+						<img class="pointer1" src="images/activity-lottery-2.png" />
+				</div>
+			</div>
+		</div>
+		<!--转盘end-->
+		<div class="awards">
+			<div class="awards_tit">
+				奖项说明
+			</div>
+			<div class="awards_text">
+				<font class="awards_color">一等奖：</font >途牛金秋豪华游<br/><font class="awards_text1">(成都-九寨沟-黄龙双飞5日游)</font>
+				<br />
+				<font class="awards_color">二等奖：</font>1月的卫岗牛奶订购
+				<br />
+				<font class="awards_color">三等奖：</font>30元手机话费充值
+				<br />
+				<font class="awards_color">四等奖：</font>电影票（通兑券）
+				<br />
+				<font class="awards_color">五等奖：</font>手机支架
+			</div>
+			<div class="awards_button" id="awards_button">
+				<img src="img/buttom_.png" />
+			</div>
+			<div class="awards_bottom">
+				获取相应抽奖资格，每天均有1次机会抽取对应奖项。
+				<br /> 本活动最终解释权归南京聚比特信息科技有限公司所有
+			</div>
+		</div>
+		<div class="alert_window">
+			<div class="alert_close">X</div>
+			<div class="alert_text">
+				<h2 style="color: red;">领奖方式</h2>
+				<div class="alert_font">1、抽奖后，中奖结果会在大转盘页面显示，可随时进行查看；</div>
+				<div class="alert_font">2、9月28日之前获得一等奖的用户，我们会在9月28日10点之前与您取得联系，跟您核实确认身份及票务信息；9月28日至9月30日获得一等奖的用户，我们会在10月1日10点之前与您取得联系，核实确认身份及票务信息；</div>
+				<div class="alert_font">3、获得二等奖的用户，我们会在5个工作日内与您联系，跟您核实确认身份及住址等信息，领取10月或11月一个月的卫岗牛奶配送；</div>
+				<div class="alert_font">4、获得三等奖的用户，我们会在7个工作日内充值到账，充值号码默认为用户登录手机号；</div>
+				<div class="alert_font">5、获得四等奖的用户，我们会将电影通兑券的兑换码在14个工作日内以消息通知-系统消息的形式发送给您，请及时关注；</div>
+				<div class="alert_font">6、获得五等奖的用户，需在苏宁环球社区活动“一家·邀请你来测试”中现场进行领取，活动地址为威尼斯水城第十一街区和第十三街区，活动时间为9月19日、20日、26日和27日，届时亲临现场即可领取活动奖品。 </div>
+
+			</div>
+		</div>
+		<!--<ul class="news">
+			<li>xx用户 133xxxxxxxx 一等奖</li>
+			<li>xx用户 134xxxxxxxx 二等奖</li>
+			<li>xx用户 135xxxxxxxx 三等奖</li>
+			<li>xx用户 136xxxxxxxx 一等奖</li>
+			<li>xx用户 137xxxxxxxx 二等奖</li>
+			<li>xx用户 138xxxxxxxx 二等奖</li>
+			<li>xx用户 139xxxxxxxx 三等奖</li>
+			<li>xx用户 150xxxxxxxx 一等奖</li>
+			<li>xx用户 151xxxxxxxx 二等奖</li>
+			<li>xx用户 150xxxxxxxx 一等奖</li>
+			<li>xx用户 139xxxxxxxx 三等奖</li>
+			<li>xx用户 138xxxxxxxx 一等奖</li>
+		</ul>-->
+		<canvas id="canvas_icon" style="display: none;" width="422px" height="422px"></canvas>
+		<script src="js/jquery.bootstrap.newsbox.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(window).load(function() {
+				window.onresize = function() {
+					
+					$(".point_box").css("display", "block");
+					$(".awards").css("display", "block");
+					$(".awards").css("top", $(".bg_img").css("height"));
+					$(".alert_window").css("height", document.body.clientHeight + "px");
+					$(".alert_window").css("height", "100%");
+					$(".turntable-bg").css("height", $(".turntable-bg").css("width"));
+					$(".turnplate").css("height", $(".turnplate").css("width"));
+				}
+				$(".point_box").css("display", "block");
+				$(".awards").css("display", "block");
+				$(".awards").css("top", $(".bg_img").css("height"));
+				$(".alert_window").css("height", document.body.clientHeight + "px");
+				$(".alert_window").css("height", "100%");
+				$(".turntable-bg").css("height", $(".turntable-bg").css("width"));
+				$(".turnplate").css("height", $(".turnplate").css("width"));
+				drawRouletteWheel();
+				var rotate_last = 0;
+				var rotateTimeOut = function() {
+					$('#wheelcanvas').rotate({
+						angle: rotate_last,
+						animateTo: 2160,
+						duration: 8000,
+						callback: function() {
+							alert('网络超时，请检查您的网络设置！');
+						}
+					});
+				};
+				var rotation2 = function() {
+					$('#wheelcanvas').rotate({
+						angle: rotate_last,
+						animateTo: 360,
+						duration: 20000,
+						callback: rotation2,
+						easing: function(x, t, b, c, d) {
+							return c * (t / d) + b;
+						}
+					});
+				}
+//				rotation2();
+				var bRotate = false;
+				var rotateFn = function(item, txt) {
+					var angles = item * (360 / turnplate.value.length) - (360 / (turnplate.value.length * 2));
+					if (angles < 270) {
+						angles = 270 - angles;
+					} else {
+						angles = 360 - angles + 270;
+					}
+					bRotate = !bRotate;
+					$('#wheelcanvas').stopRotate();
+					$('#wheelcanvas').rotate({
+						angle: rotate_last,
+						animateTo: angles + 1800,
+						duration: 6000,
+						easing: function(x, t, b, c, d) {
+							return c * ((t = t / d - 1) * t * t + 1) + b;
+						},
+						callback: function() {
+							alert(txt);
+							bRotate = !bRotate;
+//							rotation2(); //							$("#number").text("0");
+						}
+					})
+				};
+				$('.pointer1').click(function() {
+					if (bRotate) return;
+					if ($("#number").text() != 0) {
+						alert("sorry~机会已经用完");
+					} else {
+						//获取随机数(奖品个数范围内)
+						var item = rnd(1, turnplate.value.length);
+						//奖品数量等于10,指针落在对应奖品区域的中心角度[252, 216, 180, 144, 108, 72, 36, 360, 324, 288]
+						rotateFn(item, turnplate.value[item - 1].name);
+						var angles = item * (360 / turnplate.value.length) - (360 / (turnplate.value.length * 2));
+						if (angles < 270) {
+							angles = 270 - angles;
+						} else {
+							angles = 360 - angles + 270;
+						}
+						rotate_last = angles;
+						//					switch (item) {
+						//						case 0:
+						//							rotateFn(0, 360, '途牛金秋旅游');
+						//							break;
+						//						case 1:
+						//							rotateFn(1, 72, '真棒！恭喜您获得手机支架*1');
+						//							rotate_last=72;
+						//							break;
+						//						case 2:
+						//							rotateFn(2, 144, '真棒！恭喜您获得电影票（通兑劵）*1');
+						//							rotate_last=144;
+						//							break;
+						//						case 3:
+						//							rotateFn(3, 216, '真棒！恭喜您获得30元手机话费*1');
+						//							rotate_last=216;
+						//							break;
+						//						case 4:
+						//							rotateFn(4, 288, '真棒！恭喜您获得一个月的牛奶订购*1');
+						//							rotate_last=288;
+						//							break;
+						//							case 5:
+						//							rotateFn(1, 72, '真棒！恭喜您获得手机支架*1');
+						//							rotate_last=72;
+						//							break;
+						//							case 6:
+						//							rotateFn(1, 72, '真棒！恭喜您获得手机支架*1');
+						//							rotate_last=72;
+						//							break;
+						//							case 7:
+						//							rotateFn(1, 72, '真棒！恭喜您获得手机支架*1');
+						//							rotate_last=72;
+						//							break;
+						//						
+						//					}
+						//					
+					}
+				});
+			});
+			var turnplate = {
+				value: [],
+				outsideRadius: 192, //大转盘外圆的半径
+				textRadius: 155, //大转盘奖品位置距离圆心的距离
+				insideRadius: 40, //大转盘内圆的半径(0比较直观，添加数字只为做调试)
+				startAngle: 0, //开始角度
+				bRotate: false //false:停止;ture:旋转
+			};
+			$(function() {
+				//需要的参数:奖品名称。背景颜色、icon图标、奖品等级、奖品文字颜色
+				turnplate.value = [{
+					name: "手机支架",
+					color: "#ffe8e8",
+					img: "icon/thunderbird.png",
+					prizelevel: "1",
+					textcolor: "E5302F"
+				}, {
+					name: "携程金秋旅游",
+					color: "#fad5d5",
+					img: "icon/acrobat-reader.png",
+					prizelevel: "2",
+					textcolor: "fff"
+				}, {
+					name: "一打12卷卫生纸",
+					color: "#ffb8b8",
+					img: "icon/chrome.png",
+					prizelevel: "3",
+					textcolor: "E5302F"
+				}, {
+					name: "一个月的牛奶订购",
+					color: "#ffe8e8",
+					img: "icon/facebook.png",
+					prizelevel: "4",
+					textcolor: "E5302F"
+				}, {
+					name: "30元手机话费",
+					color: "#fad5d5",
+					img: "icon/illustrator.png",
+					prizelevel: "5",
+					textcolor: "fff"
+				}, {
+					name: "900ml金龙鱼大豆油",
+					color: "#ffb8b8",
+					img: "icon/itunes.png",
+					prizelevel: "6",
+					textcolor: "E5302F"
+				}, {
+					name: "电影票（通兑劵）",
+					color: "#ffe8e8",
+					img: "icon/yahoo.png",
+					prizelevel: "7",
+					textcolor: "fff"
+				}, {
+					name: "0.5kg奥妙洗衣液",
+					color: "#fad5d5",
+					img: "icon/winamp.png",
+					prizelevel: "8",
+					textcolor: "E5302F"
+				}];
+				for (var i = 0; i < turnplate.value.length; i++) {
+					$("body").append("<img id='img" + i + "'style='display:none;' src='" + turnplate.value[i].img + "'/>");
+				}
+				$("#awards_button").click(function() {
+					$(".alert_window").css("display", "block");
+				});
+				$(".alert_close").click(function() {
+					$(".alert_window").css("display", "none");
+				});
+				$(".news").bootstrapNews({
+					newsPerPage: 1,
+					autoplay: true,
+					direction: 'up',
+					newsTickerInterval: 3000,
+					navigation: false,
+					animationSpeed: 100
+				});
+			});
+
+			
+			function drawRouletteWheel() {
+				var canvas_icon = document.getElementById("canvas_icon");
+				var canvas_icon = canvas_icon.getContext("2d");
+				canvas_icon.fillStyle = "#ffe8a3";
+				canvas_icon.beginPath();
+				canvas_icon.arc(70, 18, 6, 0, Math.PI * 2, true);
+				var canvasGradient_icon = canvas_icon.createRadialGradient(70, 18, 0, 70, 18, 7);
+				canvasGradient_icon.addColorStop(0, "#ffef85");
+				canvasGradient_icon.addColorStop(0.7, "#ffbf00");
+				canvasGradient_icon.addColorStop(1, "#fac832");
+				canvas_icon.fillStyle = canvasGradient_icon;
+				canvas_icon.closePath();
+				canvas_icon.fill();
+				
+				var canvas = document.getElementById("wheelcanvas");
+				if (canvas.getContext) {
+					//根据奖品个数计算圆周角度
+					var arc = Math.PI / (turnplate.value.length / 2);
+					var ctx = canvas.getContext("2d");
+					//在给定矩形内清空一个矩形
+					ctx.clearRect(0, 0, 422, 422);
+					//strokeStyle 属性设置或返回用于笔触的颜色、渐变或模式  
+					ctx.strokeStyle = '#fff';
+					ctx.lineWidth=0;
+					//font 属性设置或返回画布上文本内容的当前字体属性
+					ctx.font = '16px Microsoft YaHei';
+					
+					    ctx.fillStyle = "#fff";
+						ctx.beginPath();
+						ctx.arc(211, 211, turnplate.insideRadius , 0, Math.PI * 2, true);
+						ctx.closePath();
+						ctx.fill();
+						
+					for (var i = 0; i < turnplate.value.length; i++) {
+						
+						var angle = turnplate.startAngle + i * arc;
+						ctx.beginPath();
+						ctx.arc(211, 211, turnplate.outsideRadius + 20, angle + arc, angle, true);
+						ctx.arc(211, 211, turnplate.outsideRadius, angle, angle + arc, false);
+						var canvasGradient = ctx.createRadialGradient(211, 211, turnplate.outsideRadius, 211, 211, turnplate.outsideRadius + 20);
+						canvasGradient.addColorStop(0, "#ff828f");
+						canvasGradient.addColorStop(0.1, "#ff828f");
+						canvasGradient.addColorStop(0.6, "#ff9ea6");
+						canvasGradient.addColorStop(1, "#ff828f");
+						ctx.fillStyle = canvasGradient;
+						ctx.closePath();
+						ctx.fill();
+						
+						
+						ctx.fillStyle = turnplate.value[i].color;
+						ctx.beginPath();
+						//arc(x,y,r,起始角,结束角,绘制方向) 方法创建弧/曲线（用于创建圆或部分圆）    
+						ctx.arc(211, 211, turnplate.outsideRadius, angle, angle + arc, false);
+						ctx.arc(211, 211, turnplate.insideRadius, angle + arc, angle, true);
+						ctx.stroke();
+						ctx.fill();
+						//锁画布(为了保存之前的画布状态)
+						ctx.save();
+						//----绘制奖品开始----
+						ctx.fillStyle = "#" + turnplate.value[i].textcolor; //字体颜色
+						var text = turnplate.value[i].name;
+						var line_height = 17;
+						ctx.translate(211 + Math.cos(angle + arc / 2) * turnplate.textRadius, 211 + Math.sin(angle + arc / 2) * turnplate.textRadius);
+						//rotate方法旋转当前的绘图
+						ctx.rotate(angle + arc / 2 + Math.PI / 2);
+						if (text.length > 6) {
+							text = text.substring(0, 6) + "||" + text.substring(6);
+							var texts = text.split("||");
+							for (var j = 0; j < texts.length; j++) {
+								ctx.fillText(texts[j], -ctx.measureText(texts[j]).width / 2, j * line_height);
+							}
+						} else {
+							ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
+						}
+						var canvas_icon = document.getElementById("canvas_icon");
+						canvas_icon.onload = function() {
+							ctx.drawImage(canvas_icon, -70, -65);
+						};
+						ctx.drawImage(canvas_icon, -70, -65);
+						
+						//图标取数据
+						var img = document.getElementById("img" + i);
+						img.onload = function() {
+							ctx.drawImage(img, -15, 30,33,33);
+						};
+						ctx.drawImage(img, -15, 30,33,33);
+						//把当前画布返回（调整）到上一个save()状态之前 
+						ctx.restore();
+						//----绘制奖品结束----
+					}
+				}
+			}
+		</script>
+		<script>
+			
+			 //修改
+			 //			function rnd(n, m) {
+			 //				var result = Math.floor(Math.random() * (m - n + 1) + n);
+			 //				if (result == 0) {
+			 //					return rnd(n, m);
+			 //				} else {
+			 //					return result;
+			 //				}
+			 //			}
+			function rnd(n, m) {
+				var random = Math.floor(Math.random() * (m - n + 1) + n);
+//				alert(random);
+				return random;
+			}
+		</script>
+	</body>
+
+</html>

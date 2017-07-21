@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/unslider.min.js"></script>
+		<title>一家App下载</title>
+	</head>
+	<style>
+		body,
+		html {
+			padding: 0px;
+			margin: 0px;
+			width: 100%;
+			height: 100%;
+			
+			background-color: #eee;
+		}
+		.welcome{
+			height: 100%;
+			width: 100%;
+			
+		}
+		.title {
+			background-image: -moz-linear-gradient(top, #00d1ff, #026efe);
+			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #00d1ff), color-stop(1, #026efe));
+		}
+		
+		.icon {
+			width: 40px;
+			height: 40px;
+			margin-left: 5%;
+		}
+		
+		.line {
+			display: inline-block;
+			color: #FFFFFF;
+			position: relative;
+			top: -12px;
+		}
+		
+		.phone {
+			width: 50%;
+			margin-left: 25%;
+			height: 60%;
+			background-color: #f3f3f3;
+			border: 1px solid #c4c4c3;
+			margin-top: 3%;
+			border-radius: 30px;
+		}
+		
+		.phoneScreen {
+			width: 90%;
+			margin-left: 5%;
+			height: 80%;
+			margin-top: 5%;
+			background-color: #000;
+			border-radius: 10px;
+		}
+		
+		.camera {
+			margin-left: 20%;
+			margin-top: 5%;
+			width: 10px;
+			height: 10px;
+			border-radius: 10px;
+			background-color: #000;
+			border-bottom: 1px #ccc solid;
+			border-left: 1px #ccc solid;
+		}
+		
+		.receiver {
+			width: 30%;
+			height: 5px;
+			background-color: #cececc;
+			margin-top: -3.5%;
+			margin-left: 35%;
+			border-radius: 10px;
+			border-bottom: 1px #eee solid;
+			border-left: 1px #eee solid;
+		}
+		
+		.phoneButton {
+			background-color: #f3f3f3;
+			border: 1px solid #c4c4c3;
+			width: 20%;
+			margin-left: 40%;
+			height: 5%;
+			margin-top: 6%;
+		}
+		
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-font-smoothing: antialiased;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		
+		.banner {
+			position: relative;
+			width: 100%;
+			overflow: auto;
+			height: 100%;
+			font-size: 18px;
+			/*line-height: 24px;*/
+			text-align: center;
+			color: rgba(255, 255, 255, .6);
+			text-shadow: 0 0 1px rgba(0, 0, 0, .05), 0 1px 2px rgba(0, 0, 0, .3);
+			border-radius: 10px;
+			background: #000;
+			box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+		}
+		
+		.banner ul {
+			list-style: none;
+			width: 300%;
+			height: 100%;
+			border-radius: 10px;
+		}
+		
+		.banner ul li {
+			display: block;
+			float: left;
+			width: 33%;
+			height: 100%;
+			border-radius: 10px;
+			-o-background-size: 100% 100%;
+			-ms-background-size: 100% 100%;
+			-moz-background-size: 100% 100%;
+			-webkit-background-size: 100% 100%;
+			background-size: 100% 100%;
+			box-shadow: inset 0 -3px 6px rgba(0, 0, 0, .1);
+		}
+		
+		.text {
+			width: 100%;
+			text-align: center;
+			font-size: 1.3em;
+			margin-top: 3%;
+			font-weight: bold;
+		}
+		.downButton{
+			width: 60%;
+			padding-top:2% ;
+			padding-bottom: 2%;
+			text-align: center;
+			margin-left: 20%;
+			margin-top: 3%;
+			background-color: #41aeff;
+			border-radius: 20px;
+			border-bottom: 3px solid #3c9ce4;
+			color: #fff;
+		}
+		.intro{
+			margin-top: 0%;
+			height: 100%;
+			background-color: #e2f3ff;
+			border-top: 2px #bbb solid;
+		}
+		
+.cloudBlue {
+z-index: 1;
+margin-top: 4%;
+margin-left: 15%;
+width: 3.6875em;
+height: 3.5875em;
+background: #b3f5ff;
+border-radius: 50%;
+box-shadow:
+-2.2875em 0.6875em 0 -0.6875em #b3f5ff,
+2.0625em 0.9375em 0 -0.9375em #b3f5ff,
+0 0 0 0.375em #fff,
+-2.1875em 0.6875em 0 -0.3125em #fff,
+2.0625em 0.9375em 0 -0.6625em #fff;
+}
+.cloud div{
+	width: 100%;
+	text-align: center;
+	position: relative;
+	top: 30%;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+.cloudRed {
+z-index: 1;
+margin-top: 4%;
+margin-left: 10%;
+width: 3.6875em;
+height: 3.5875em;
+background: #ffb3f3;
+border-radius: 50%;
+box-shadow:
+-2.2875em 0.6875em 0 -0.6875em #ffb3f3,
+2.0625em 0.9375em 0 -0.9375em #ffb3f3,
+0 0 0 0.375em #fff,
+-2.1875em 0.6875em 0 -0.3125em #fff,
+2.0625em 0.9375em 0 -0.6625em #fff;
+}
+.cloudYellow{
+z-index: 1;
+margin-top: 4%;
+margin-left: 20%;
+width: 3.6875em;
+height: 3.5875em;
+background: #f7ffb3;
+border-radius: 50%;
+box-shadow:
+-2.2875em 0.6875em 0 -0.6875em #f7ffb3,
+2.0625em 0.9375em 0 -0.9375em #f7ffb3,
+0 0 0 0.375em #fff,
+-2.1875em 0.6875em 0 -0.3125em #fff,
+2.0625em 0.9375em 0 -0.6625em #fff;
+}
+.intr_text{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 5%;
+	text-indent: 2em;
+}
+	</style>
+
+	<body>
+		<div class="welcome">
+		<div class="title">
+			<img class="icon" src="img/icon.png" />
+			<div class="line">一家</div>
+			<div class="line" style="width: 60%;text-align: right;">欢迎回家</div>
+		</div>
+		<div class="phone">
+			<div class="camera"></div>
+			<div class="receiver"></div>
+			<div class="phoneScreen">
+				<div class="banner">
+					<ul>
+						<li style="background-image: url(img/introduce1.jpg);"></li>
+						<li style="background-image: url(img/introduce.jpg);"></li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="phoneButton"></div>
+		</div>
+		<div class="text">一款面向社区的安全社交APP</div>
+		<div class="downButton">安卓下载</div>
+		<div class="downButton">ios下载</div>
+		</div>
+		<div class="intro">
+			<div class="cloud cloudRed" style="margin-top: 10%;"><div>安全</div></div>
+			<div class="intr_text">
+			所有用户需进行业主身份认证方能流畅使用，确保了社区沟通的安全性
+			</div>
+			<div class="cloud cloudBlue"><div>社区</div></div><div class="intr_text">
+			从增加小区居民主动交流、畅快沟通出发，从根本上解决问题，构建一个健康有序的小区生态圈。
+</div>
+			<div class="cloud cloudYellow"><div>社交</div></div><div class="intr_text">
+			提供邻里对话、社区论坛两大主打功能，拥有家人一键通话、楼栋场景模拟等特色功能及其他基础功能。</div>
+		</div>
+	</body>
+	<script>
+		$(function() {
+	    $('.banner').unslider();
+	});
+	</script>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"><title></title><link rel="stylesheet" href="css/mobile.css"><script type="text/javascript" src="js/jquery-1.11.1.min.js"></script></head><body><div class="bg"><img src="images/pcBg1.png" class="bgImg"> <img src="images/pcSelectPhone2.png" class="bgPhone"> <img class="title" src="images/pcSelect5Title.png"><p class="desc">从未如此简单</p><p class="smallDesc">广告投放仅需三步</p><img src="images/mobilephone.png" class="phone"> <img src="images/download.png" class="download"> <a href="tutorial.html"><p class="info">3步快速投放教程</p></a></div><script>function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+if(IsPC()){
+	window.location.href="./index.html"; 
+}
+ window.onresize=function(){  
+                if(IsPC()){
+	window.location.href="./index.html"; 
+}
+            }  
+			window.onload = function() {
+				$(".bgImg").animate({
+					left: "0%",
+					top: "-10%",
+					opacity: '0.7',
+				}, 0).animate({
+
+					left: "-5%",
+					top: "-5%",
+					opacity: '1',
+				}, 1500);
+				$(".phone").animate({
+					left: "-65%",
+					top: "20%",
+					opacity: '0',
+				}, 0).animate({
+
+					left: "-12.5%",
+					top: "0%",
+					opacity: '1',
+				}, 1500);
+				$(".bgPhone").animate({
+					left: "30%",
+					top: "20%",
+					opacity: '0',
+				}, 0).animate({
+					left: "20%",
+					top: "31%",
+					opacity: '0.3',
+				}, 1500);
+				$(".title").animate({
+					top: "10vh",
+					opacity: '0',
+				}, 0).animate({
+					top: "10vh",
+					opacity: '0',
+				}, 600).animate({
+					top: "0vh",
+					opacity: '1',
+				}, 1000);
+				$(".desc,.smallDesc").animate({
+					top: "10vh",
+					opacity: '0',
+				}, 0).animate({
+					top: "10vh",
+					opacity: '0',
+				}, 750).animate({
+					top: "0vh",
+					opacity: '1',
+				}, 1000);
+				$(".download").animate({
+					top: "0em",
+					opacity: '0',
+				}, 0).animate({
+					top: "0em",
+					opacity: '0',
+				}, 1000).animate({
+					top: "-5em",
+					opacity: '1',
+				}, 1000);
+				$(".info").animate({
+					bottom: "-5em",
+					opacity: '0',
+				}, 0).animate({
+					bottom: "-5em",
+					opacity: '0',
+				}, 1000).animate({
+					bottom: "1em",
+					opacity: '2',
+				}, 1000);
+				
+			}</script></body></html>

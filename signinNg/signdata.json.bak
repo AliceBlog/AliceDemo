@@ -1,0 +1,182 @@
+{ "days": 30,
+    "conDays": 1,
+    "houseGolds": [
+        {
+            "householdsId": 6,
+            "housegolds": 5,
+            "resqtrname": "聚比特大厦1栋106"
+        },
+        {
+            "householdsId": 36,
+            "housegolds": 0,
+            "resqtrname": "天华硅谷3栋108"
+        },
+        {
+            "householdsId": 221,
+            "housegolds": 0,
+            "resqtrname": "聚比特大厦8栋905"
+        },
+        {
+            "householdsId": 43,
+            "housegolds": 0,
+            "resqtrname": "聚比特大厦1栋603"
+        },
+        {
+            "householdsId": 109,
+            "housegolds": 0,
+            "resqtrname": "聚比特大厦8栋301"
+        },
+        {
+            "householdsId": 126,
+            "housegolds": 0,
+            "resqtrname": "聚比特大厦7栋906"
+        }
+    ],
+   
+    "awardRecords": [
+        {
+            "sign": true,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 9
+        },
+        {
+            "sign": true,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 4
+        },
+        {
+            "sign": true,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 3
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 10
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 11
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 12
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 13
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 14
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 15
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 16
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 17
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 18
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 19
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 20
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 21
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 22
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 23
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 24
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 25
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 26
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 27
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 28
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 29
+        },
+        {
+            "sign": false,
+            "icon": "http://127.0.0.1/file/gift/2015/11/04/1/Z0lhGUk6aITRqYkA",
+            "prize": "金币",
+            "day": 30
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>test</title>
+<script src="js/angular.min.js"></script>
+
+</head>
+  
+<body>
+<div ng-app="myApp">
+  <div ng-controller="testCtrl">
+    <ul>
+      <li ng-repeat="item in items" is-over="toggle.now" >{{item}}</li>
+    </ul>   
+  </div>
+</div>
+<script>
+var myApp = angular.module("myApp", []);
+    myApp.directive('isOver',function(){
+    	
+        return {
+            restrict: 'A',
+            scope: {
+                over: '=isOver'
+            },
+            link:function(scope, elm, attr){
+                if(scope.$parent.$last){
+                    scope.over = true;
+                    
+                }
+            }
+        }
+    });
+    myApp.controller("testCtrl", function($scope){
+        $scope.items = [0,1,2,3,4];
+        $scope.toggle = {        
+            now:false
+        };
+        $scope.$watch('toggle.now',function(){
+            if($scope.toggle.now)
+            alert($scope.items);
+                console.log('over!');
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="js/createjs.js" ></script>
+	</head>
+	<body>
+		<div onclick="open_music()">点击播放音乐</div>
+		<div onclick="stop_music()">点击停止播放音乐</div>
+		<script>
+            var myInstance = null;
+            var itval = null;
+            createjs.Sound.on("fileload", init);
+            createjs.Sound.registerSound({ src: "err.mp3", id: "err" });
+
+            function getSate() {
+                console.log(myInstance.playState);
+                if (myInstance.playState == createjs.Sound.PLAY_FINISHED) {
+                    alert("我靠，终于播完了！我得歇会儿！");
+                    clearInterval(itval);
+                }
+           
+            }
+            function init(){
+                myInstance = createjs.Sound.createInstance("err");
+                myInstance.play("err", { interrupt: createjs.Sound.INTERRUPT_ANY, loop: -1 });                
+                itval = setInterval("getSate()", 500);
+			}
+			function open_music(){
+			    myInstance.play("err", { interrupt: createjs.Sound.INTERRUPT_ANY, loop: -1 });
+			    itval = setInterval("getSate()", 500);
+			}
+			function stop_music(){
+			    myInstance.stop("err");
+			}
+			
+			
+		</script>
+	</body>
+</html>

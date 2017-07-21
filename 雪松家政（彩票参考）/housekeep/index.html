@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>雪松家政</title>
+		<style>
+				body {
+				width: 100%;
+				margin: 0px;
+				padding: 0px;
+				overflow-x: hidden;
+				background-color: #f6f6f6;
+			}
+			
+			.page1_bar {
+				width: 100%;
+			}
+			
+			#tabs {
+				overflow: hidden;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				background-color: #fff;
+			}
+			
+			#tabs li {
+				float: left;
+				width: 50%;
+				text-align: center;
+			}
+			
+			#tabs a {
+				float: left;
+				width: 50%;
+				text-decoration: none;
+				position: relative;
+				left: 30%;
+				height: 30px;
+				color: #ffa800;
+				font-weight: bold;
+				border-bottom: 2px solid #f6f6f6;
+				padding-top: 10px;
+			}
+			
+			#tabs a:hover,
+			#tabs a:focus {
+				border-bottom-color: #ffa800;
+				opacity: 1;
+				filter: alpha(opacity=100);
+			}
+			
+			#tabs a:focus {
+				outline: 0;
+			}
+			
+			#tabs #current {
+				z-index: 3;
+				border-bottom-color: #ffa800;
+				opacity: 1;
+				filter: alpha(opacity=100);
+			}
+			
+			.bar {
+				background-color: #FFFFFF;
+				margin-top: 3%;
+				width: 100%;
+				padding: 4%;
+				overflow: hidden;
+			}
+			
+			.bar img {
+				width: 20%;
+				margin-top: -7%;
+			}
+			
+			.bar_title {
+				background-color: #ff9955;
+				color: #fff;
+				width: 30%;
+				text-align: center;
+				position: relative;
+				margin-top: 1%;
+				left:74%;
+				transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+				
+			}
+			.bar_text{
+				font-size: 1.2em;
+				position: relative;
+				margin-top: -7%;
+				top: -20px;
+				margin-left: 25%;
+				width: 70%;
+			}
+			.bar_tel{
+				width: 90%;
+				text-align: right;
+				margin-top: -4%;
+			}
+			a{
+				text-decoration: none;
+				color: #111;
+				font-size: 0.8em;
+			}
+			.classify{
+				margin-top: 3%;
+				background-color: #fff;
+				width: 100%;
+			}
+			.category{
+				width: 100%;
+				border-bottom: 1px solid #ccc;
+				padding-top: 3%;
+				padding-bottom: 3%;
+			}
+			.category_title{
+				width: 50%;
+				padding-left: 5%;
+				border-left: 0.4em solid #ffa800;
+				font-weight: 600;
+				color: #666;
+			}
+			table{
+    table-layout:fixed;
+    empty-cells:show; 
+    border-collapse: collapse;
+    margin:0 auto;
+    width: 90%;margin-left: 5%;
+    font-size: 0.5em;
+    margin-top: 4%;
+}
+table tr td{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	border: 1px solid #aaa;
+	color: #555;
+}
+.table_title{
+	width: 10%;
+	background-color: #fff9db;
+	color: #ffa800;
+}
+.table_hint{
+	color: #ffa800;
+	width: 90%;
+	margin-left: 5%;
+	font-size: 0.5em;
+	margin-top: 4%;
+}
+.page1_table,.table_hint{
+display: none;	
+}
+		</style>
+	</head>
+
+	<body>
+		<img src="img/page1_bar.png" class="page1_bar" />
+
+		<ul id="tabs">
+			<li><a href="#" name="#tab1">单项服务</a></li>
+			<li><a href="#" name="#tab2">综合服务</a></li>
+		</ul>
+		<div id="content">
+			<div id="tab1">
+				<div class="bar">
+					<div class="bar_title">一家专享</div>
+					<img src="img/hui.png" />
+                    <div class="bar_text">保洁类服务享9折收费</div>
+                    <div class="bar_tel"><a href="tel:4001868529">订购电话：400—186-8529</a></div>
+				</div>
+				<div class="classify">
+					<div class="category category1">
+						<div class="category_title">钟点工</div>
+						<table class="page1_table">
+							<tr>
+								<td rowspan = "6" class="table_title" >每<br />月<br />固<br />定<br />型</td>
+								<td></td>
+								<td>每次2小时</td>
+								<td>每次3小时</td>
+								<td>每次4小时</td>
+								
+							</tr>
+							<tr>
+								<td>每周一次</td>
+								<td>300元</td>
+								<td>400元</td>
+								<td>500元</td>
+							</tr>
+							<tr>
+								<td>每周二次</td>
+								<td>600元</td>
+								<td>800元</td>
+								<td>1000元</td>
+							</tr>
+							<tr>
+								<td>每周三次</td>
+								<td>800元</td>
+								<td>1100元</td>
+								<td>1400元</td>
+							</tr>
+							<tr>
+								<td>每周五次</td>
+								<td>900元</td>
+								<td>1300元</td>
+								<td>1600元</td>
+							</tr>
+							<tr>
+								<td>每周六次</td>
+								<td>1000元</td>
+								<td>1500元</td>
+								<td>1800元</td>
+							</tr>
+						</table>
+						<table class="page1_table">
+							<tr>
+								<td rowspan = "2" class="table_title" >每<br />年<br />灵<br />活<br />型</td>
+								<td>节约卡</td>
+								<td>贵宾银卡</td>
+								<td>贵宾金卡</td>
+								<td>土豪金卡</td>
+								
+							</tr>
+							<tr>
+								<td>1500/40小时</td>
+								<td>3000/90小时</td>
+								<td>6000/200小时</td>
+								<td>10000/400小时</td>
+							</tr>
+							
+						</table>
+					</div>
+					<div class="category category2">
+						<div class="category_title">保姆</div>
+						<table class="page1_table">
+							<tr>
+								<td rowspan = "3" class="table_title" >白<br />班<br />保<br />姆
+								<td></td>
+								<td>卫生+做饭</td>
+								<td>卫生+小孩</td>
+								<td>卫生+老人</td>
+							</tr>
+							<tr>
+								<td>双休</td>
+								<td>2800元/月</td>
+								<td>3000元/月</td>
+								<td>2800元/月</td>
+							</tr>
+							<tr>
+								<td>单休</td>
+								<td>2800元/月</td>
+								<td>3000元/月</td>
+								<td>2800元/月</td>
+							</tr>
+						</table>
+						<table class="page1_table">
+							<tr>
+								<td rowspan = "3" class="table_title" >住<br />家<br />保<br />姆
+								<td>卫生+做饭</td>
+								<td colspan="3">单休3000元/月</td>
+								
+							</tr>
+							<tr>
+								<td>卫生+小孩</td>
+								<td>（0-1岁）<br/>4500元/月</td>
+								<td>（1-3岁）<br/>4000元/月</td>
+								<td>（3-11岁）<br/>3500元/月</td>
+							</tr>
+							<tr>
+								<td>卫生+老人</td>
+								<td>（能自理）<br/>3000元/月</td>
+								<td>（半自理）<br/>3200元/月</td>
+								<td>（不能自理）<br/>3500元/月</td>
+							</tr>
+						</table>
+					</div>
+					<div class="category category3">
+						<div class="category_title">月嫂</div>
+						<table class="page1_table">
+							<tr>
+								<td>初级月嫂</td>
+								<td>中级月嫂</td>
+								<td>高级月嫂</td>
+								<td>特级月嫂</td>
+								<td>星级月嫂</td>
+							</tr>
+							<tr>
+								<td>5800元/26天</td>
+								<td>6800元/26天</td>
+								<td>8800元/26天</td>
+								<td>10800元/26天</td>
+								<td>18800元/26天</td>
+							</tr>
+						</table>
+						<div class="table_hint">具体价格根据雇工工作要求和服务经验级别一级地域性有所差异</div>
+					</div>
+					<div class="category category4">
+					<div class="category_title">保洁清洗</div>
+					<table class="page1_table">
+							<tr>
+								<td>日常保洁</td>
+								<td>3元/平米</td>
+								<td>开荒保洁</td>
+								<td>4元/平米</td>
+							</tr>
+							<tr>
+								<td>地板打蜡</td>
+								<td>8元/平米</td>
+								<td>开荒保洁</td>
+								<td>3元/平米</td>
+							</tr>
+							<tr>
+								<td>沙发清洁</td>
+								<td>300元/套</td>
+								<td>开荒保洁</td>
+								<td>80元/个</td>
+							</tr>
+							<tr>
+								<td>甲醛检测</td>
+								<td>200元/次</td>
+								<td>开荒保洁</td>
+								<td>25元/平米</td>
+							</tr>
+						</table>
+					<div class="table_hint">江苏电视台推荐，AAA级保洁企业，全市连锁，随叫随到，不因事小而不为</div>
+					</div>
+				</div>
+
+			</div>
+			<div id="tab2">、
+				<div class="bar">
+					<div class="bar_title">一家专享</div>
+					<img src="img/hui.png" />
+                    <div class="bar_text" style="margin-top: -13%;width:55%;">缴2000元享终身家政服务(原1年)</div>
+                    <div class="bar_tel"><a href="tel:4001868529">订购电话：400—186-8529</a></div>
+				</div>
+				<div class="classify">
+					<div class="category category1">
+						<div class="category_title"style="width: 100%;">雇主需缴纳2000元/年的会员服务费。</div>
+						<br />
+						<div style="width: 90%;margin-left: 5%;color: #555;line-height: 2em;font-size: 0.8em;">
+						1）可享受服务期内免费更换家政服务员。<br />
+						2）可享受服务期内家政老师的定期回访，协调处理雇主和家政员之间的发生各种矛盾纠纷。<br />
+						3）可享受服务期内家政服务员定期“私人定制”式服务技能提高的培训和服务意识增强的思想交流沟通。<br />
+						4）可享受服务期内所有保洁清洗保养类服务项目9折优惠。<br />
+						5）可享受免费空调清洗，管道疏通，水电维修一次。（三选一）<br />
+						6）可享受电脑上门维修、路由器安装调试、系统重装一次。（三选一）<br />
+						7）可享受“百服教育”金牌老师的择优选用。<br />
+						8）可享受公司定期组织的家庭生活联谊会，家庭教育培训沙龙。<br /><br />
+						<div style="font-size: 1.3em;font-weight: 600;">综合服务是缴纳2000元可享受雪松家政为期1年的全方位家政服务。<br /><br />
+						综合服务通过一家APP订购可：缴纳2000元可享受雪松家政的终身家政服务。<br /><br /></div>
+						
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script src="http://www.jq22.com/demo/tabs-Google%20Play/js/jquery-1.7.2.min.js"></script>
+		<script>
+			function resetTabs() {
+				$("#content > div").hide();
+				$("#tabs a").attr("id", "");
+				
+			}
+			$(function(){
+				$(".category").click(function(){
+					$(this).siblings().children(".page1_table,.table_hint").fadeOut();
+					$(this).children(".page1_table,.table_hint").fadeToggle();
+				});
+			})
+			var myUrl = window.location.href;
+			var myUrlTab = myUrl.substring(myUrl.indexOf("#"));
+			var myUrlTabName = myUrlTab.substring(0, 4);
+			(function() {
+				$("#content > div").hide();
+				$("#tabs li:first a").attr("id", "current");
+				$("#content > div:first").fadeIn();
+				$("#tabs a").on("click", function(e) {
+					e.preventDefault();
+					if ($(this).attr("id") == "current") {
+						return
+					} else {
+						resetTabs();
+						$(this).attr("id", "current");
+						$($(this).attr('name')).fadeIn();
+					}
+				});
+				for (i = 1; i <= $("#tabs li").length; i++) {
+					if (myUrlTab == myUrlTabName + i) {
+						resetTabs();
+						$("a[name='" + myUrlTab + "']").attr("id", "current");
+						$(myUrlTab).fadeIn();
+					}
+				}
+			})()
+		</script>
+	</body>
+
+</html>

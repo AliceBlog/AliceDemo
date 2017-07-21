@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/lottery.css" />
+		<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery.pin.js" ></script>
+		<title>一家APP公测使用调查问卷</title>
+	</head>
+	<script>
+		var interval = 1000; 
+function ShowCountDown(year,month,day,hour,minute,second,divname) 
+{ 
+var now = new Date(); 
+var endDate = new Date(year, month-1, day,hour,minute,second); 
+var leftTime=endDate.getTime()-now.getTime(); 
+if(leftTime>=0){
+	
+var leftsecond = parseInt(leftTime/1000); 
+var day1=Math.floor(leftsecond/(60*60*24)); 
+var hour=Math.floor((leftsecond-day1*24*60*60)/3600); 
+var minute=Math.floor((leftsecond-day1*24*60*60-hour*3600)/60); 
+var second=Math.floor(leftsecond-day1*24*60*60-hour*3600-minute*60); 
+var cc = document.getElementById(divname); 
+cc.innerHTML = day1*24+hour+"时"+minute+"分"+second+"秒";
+
+}else{
+	var cc = document.getElementById(divname); 
+	cc.innerHTML = "0时0分0秒"; 
+	if($("#time2").html()=="0时0分0秒"){
+			
+			$("#household_go1").css("background-color","#fff200");
+		    $("#household_go1").css("box-shadow","0 9px 0 #dbc329,0 9px 25px rgba(0,0,0,0.7)");
+		
+		}if($("#time3").html()=="0时0分0秒"){
+			
+			$("#household_go2").css("background-color","#fff200");
+		    $("#household_go2").css("box-shadow","0 9px 0 #dbc329,0 9px 25px rgba(0,0,0,0.7)");
+		}
+		if($("#time1").html()=="0时0分0秒"){
+			$("#household_go").css("background-color","#fff200");
+		    $("#household_go").css("box-shadow","0 9px 0 #dbc329,0 9px 25px rgba(0,0,0,0.7)");
+		
+		}
+					
+				
+	
+}
+
+}
+window.setInterval(function(){ShowCountDown(2015,9,8,11,28,00,'time1');}, interval);
+window.setInterval(function(){ShowCountDown(2015,9,8,17,53,00,'time2');}, interval); 
+window.setInterval(function(){ShowCountDown(2015,9,12,12,15,00,'time3');}, interval);
+	</script>
+
+	<body>
+		<div class="title">
+			<img src="img/banner.png" />
+		</div>
+		<div class="container">
+		<div class="bar">
+			<div class="introduce_pin">
+			<div class="introduce">专注社区安全社交，软件用户均是经过严格认证的小区业主，请放心与您的小区安全沟通！</div>
+			<br /></div>
+			<div class="introduce1">本问卷采用不记名方式，所有信息仅供内部分析使用，请您放心作答。</div>
+			<br/>
+			
+			<hr class="hr" />
+			<div class="hint">注册软件账号即可提交问卷 ——1,获取A轮抽奖资格。</div>
+			<div class="time">距离提交问卷还剩：<font id="time1"></font></div>
+		</div>
+		<div>
+			<div id="backstage_value">
+				<form id="household_form" name="forms">
+					<br />
+					<div id="live">1、您住在江北吗?</div>
+
+					<input type="radio" name="live" value="是的" class="live" />是的
+					<br />
+					<input type="radio" name="live" value="不是的" class="live" />不是的
+					<br />
+					<input type="radio" name="live" value="不知道" class="live" />不知道
+					<br />
+					<br />
+					<div id="plate">2、您平常最喜欢浏览哪些论坛网站及板块？(可多选)</div>
+
+					<input type="checkbox" class="plate" name="plate_xici" value="西祠胡同" />西祠胡同
+					<input name="plate_xici_input" type="text" />板块
+					<br />
+					<input type="checkbox" class="plate" name="plate_longhu" value="龙虎社区" />龙虎社区
+					<input type="text" name="plate_longhu_input" />板块
+					<br />
+					<input type="checkbox" class="plate" name="plate_baidu" value="百度贴吧" />百度贴吧
+					<input type="text" name="plate_baidu_input" />板块
+					<br />
+					<input type="checkbox" class="plate" name="plate_njshenghuo" value="南京生活网" />南京生活网
+					<input type="text" name="plate_njshenghuo_input" />板块
+					<br />
+					<input type="checkbox" class="plate" name="plate_other" value="其他" />其他
+					<input type="text" name="plate_other_input" />
+					<br />
+					<br />
+					<div id="software"> 3、您认为一款社区安全社交软件，哪些方面是最需要加强的？（可多选）</div>
+
+					<input type="checkbox" class="software" name="software_attestation" value="进入小区人员的安全认证" />进入小区人员的安全认证
+					<br />
+					<input type="checkbox" class="software" name="software_im" value="交流功能的设计" />交流功能的设计
+					<br />
+					<input type="checkbox" class="software" name="software_bbs" value="小区论坛的设计" />小区论坛的设计
+					<br />
+					<input type="checkbox" class="software" name="software_business" value="需要配套相应的小区商业" />需要配套相应的小区商业
+					<br />
+					<input type="checkbox" class="software" name="software_other" value="其他" />其他
+					<input type="text" name="software_other_input" />
+					<br />
+					<br />
+					<div id="social"> 4、为保证软件内小区人员的安全社交，以下哪些认证方式您认为可行？（可多选）：</div>
+
+					<input type="checkbox" class="social" name="social_residence" value="上传户口簿认证" />上传户口簿认证
+					<br />
+					<input type="checkbox" class="social" name="social_pay" value="上传水电煤等缴费单认证" />上传水电煤等缴费单认证
+					<br />
+					<input type="checkbox" class="social" name="social_identity" value="上传身份证照片认证" />上传身份证照片认证
+					<br />
+					<input type="checkbox" class="social" name="social_other" value="其他方式" />其他方式
+					<input name="social_other_input" type="text" />
+					<br />
+					<br /> 5、您认为一个好的社区交流软件应具备哪些功能？
+					<br />
+					<textarea name="action" id="action" style="width: 98%;height: 80px;"></textarea>
+
+				</form>
+			</div>
+			<div id="household_go" class="household_go">我要抽奖</div>
+			<hr class="hr1" />
+			<div class="hint sencond_hint">注册账号满12小时可提交问卷 ——2,获取B轮抽奖资格。</div>
+			<div class="time sencond_time">距离提交问卷还剩：<font id="time2"></font></div>
+			<div id="backstage_value1" class="sencond_backstage">
+				<form id="household_form1" name="forms1">
+					<br />
+					<div id="interface">
+						1、您觉得一家APP用户界面是否符合”社区安全”概念？
+					</div>
+					<input type="radio" class="interface" name="interface" value="符合" />符合
+					<br />
+					<input type="radio" class="interface" name="interface" value="不符合,但界面还可以" />不符合,但界面还可以
+					<br />
+					<input type="radio" class="interface" name="interface" value="不符合,界面需修改" />不符合,界面需修改
+					<br /> 您的建议:
+					<input type="text" name="interface_advice" />
+					<br />
+					<br />
+					<div id="mastery">2、作为新用户，在第一次使用一家APP 时，您是否能快速掌握应用的使用方法？</div>
+					<input type="radio" class="mastery" name="mastery" value="是，能快速掌握" />是，能快速掌握
+					<br />
+					<input type="radio" class="mastery" name="mastery" value="一般，需要自己摸索很长时间" />一般，需要自己摸索很长时间
+					<br />
+					<input type="radio" class="mastery" name="mastery" value="否，需要咨询其他人" />否，需要咨询其他人
+					<br />
+					<br />
+					<div id="short_dump">3、测试期间，一家APP是否出现过程序运行崩溃、假死、闪退等情况？</div>
+					<input type="radio" class="short_dump" name="short_dump" value="否，没出现过" />否，没出现过
+					<br />
+					<input type="radio" class="short_dump" name="short_dump" value="是，偶尔出现" />是，偶尔出现
+					<br />
+					<input type="radio" class="short_dump" name="short_dump" value="是，经常出现" />是，经常出现
+					<br />
+					<br />
+					<div id="speed">4、一家APP运行与加载速度比较其他主流应用而言：</div>
+					<input type="radio" class="speed" name="speed" value="更快、流程" />更快、流程
+					<br />
+					<input type="radio" class="speed" name="speed" value="差不多" />差不多
+					<br />
+					<input type="radio" class="speed" name="speed" value="更慢、偶尔卡顿" />更慢、偶尔卡顿
+					<br />
+					<input type="radio" class="speed" name="speed" value="没感觉" />没感觉
+					<br />
+					<br /> 5、您对一家APP的建议：请至少提出1点建议
+					<br />
+					<textarea name="suggest" id="suggest" style="width: 98%;height: 80px;"></textarea>
+				</form>
+			</div>
+			<div id="household_go1" class="household_go1 household_go">我要抽奖</div>
+			<hr class="hr2" />
+			<div class="hint third_hint">注册账号满36小时可提交问卷 ——3,获取C轮抽奖资格。</div>
+			<div class="time third_time">距离提交问卷还剩：<font id="time3"></font></div>
+			<div id="backstage_value2" class="third_backstage">
+				<form id="household_form2" name="forms2">
+					<br />
+					<div id="feature">1、一家APP的哪个功能最吸引您？（可多选）</div>
+					<input type="checkbox" class="feature" name="feature_windmill" value="右上角的小风车（官方活动栏）" />右上角的小风车（官方活动栏）
+					<br />
+					<input type="checkbox" class="feature" name="feature_bbs" value="BBS（小区吐槽圣地）" />BBS（小区吐槽圣地）
+					<br />
+					<input type="checkbox" class="feature" name="feature_im" value="IM（社区交流）" />IM（社区交流）
+					<br />
+					<input type="checkbox" class="feature" name="feature_call" value="一键通话（家庭免费通话）" />一键通话（家庭免费通话）
+					<br />
+					<br />
+					<div id="notlikeFeature">2、您最不喜欢一家APP的哪个功能？（可多选）</div>
+					<input type="checkbox" class="notlikeFeature" name="notlikeFeature_index" value="首页楼栋页面设计" />首页楼栋页面设计
+					<br />
+					<input type="checkbox" class="notlikeFeature" name="notlikeFeature_myHouse" value="我的楼栋和房屋的场景" />我的楼栋和房屋的场景
+					<br />
+					<input type="checkbox" class="notlikeFeature" name="notlikeFeature_approve" value="认证与申诉" />认证与申诉
+					<br />
+					<input type="checkbox" class="notlikeFeature" name="notlikeFeature_other" value="其他" />其他
+					<input type="text" name="notlikeFeature_advice" />
+					<br />
+					<br />
+					<div id="reasonable1"> 3、您认为一家APP首页淡幕设计是否合理？</div>
+
+					<input type="radio" class="reasonable" name="reasonable" value="合理" />合理
+					<br />
+					<input type="radio" name="reasonable" value="没概念" class="reasonable" />没概念
+					<br />
+					<input type="radio" name="reasonable" class="reasonable" id="reasonable" value="不合理，您的建议" />不合理，您的建议
+					<input type="text" name="reasonable_advice" />
+					<br />
+					<br />
+					<div id="bbsreasonable1">4、您认为一家APP小区论坛排版是否合理？</div>
+					<input type="radio" class="bbsreasonable" name="bbsreasonable" value="合理" />合理
+					<br />
+					<input type="radio" class="bbsreasonable" name="bbsreasonable" value="没概念" />没概念
+					<br />
+					<input type="radio" class="bbsreasonable" name="bbsreasonable" id="bbsreasonable" value="不合理，您的建议" />不合理，您的建议
+					<input type="text" name="bbsreasonable_advice" />
+					<br />
+					<br />
+					<div id="imreasonable1">5、您认为一家APP IM布局是否合理？</div>
+					<input type="radio" class="imreasonable" name="imreasonable" value="合理" />合理
+					<br />
+					<input type="radio" class="imreasonable" name="imreasonable" value="没概念" />没概念
+					<br />
+					<input type="radio" class="imreasonable" name="imreasonable" id="imreasonable" value="不合理，您的建议" />不合理，您的建议
+					<input type="text" name="imreasonable_advice" />
+					<br />
+					<br />6、您觉得一家APP首页中心按钮，除了“点击后回到家庭页面”的功能外，还可以增加哪些功能？
+					<br />
+					<textarea name="add_action" id="add_action" style="width: 98%;height: 80px;"></textarea>
+					<br />
+					<br />7、一款社区安全交流软件，哪些功能是您想需要的？或一家APP的哪些功能你认为应该加强？
+					<br />
+					<textarea name="strong_action" id="strong_action" style="width: 98%;height: 80px;"></textarea>
+				</form>
+			</div>
+			<div id="household_go2" class="household_go2 household_go">我要抽奖</div>
+			<div class="buttom">与您的小区安全沟通——一家！<br/>本次活动与苹果公司无关</div>
+			<div id="test"></div>
+		</div>
+		</div>
+		<script>
+			(function($) {
+				$.fn.serializeJson = function() {
+					var serializeObj = {};
+					var array = this.serializeArray();
+					var str = this.serialize();
+					$(array).each(function() {
+						if (serializeObj[this.name]) {
+							if ($.isArray(serializeObj[this.name])) {
+								serializeObj[this.name].push(this.value);
+							} else {
+								serializeObj[this.name] = [serializeObj[this.name], this.value];
+							}
+						} else {
+							serializeObj[this.name] = this.value;
+						}
+					});
+					return serializeObj;
+				};
+			})(jQuery);
+			$(function() {
+				$(".introduce_pin").pin({
+      containerSelector: ".container"
+       });
+				var firstForm=true;
+				//第一张表单提高用户体验
+				$(".live").click(function(){
+					var id=$("#live").attr("id");
+				   document.body.scrollTop=document.getElementById(id).offsetTop-150
+				});
+				$(".plate").click(function(){
+					var id=$("#plate").attr("id");
+				   document.body.scrollTop=document.getElementById(id).offsetTop-150
+				});
+				$(".software").click(function(){
+					var id=$("#software").attr("id");
+				   document.body.scrollTop=document.getElementById(id).offsetTop-150
+				});
+				$(".social").click(function(){
+					var id=$("#social").attr("id");
+				   document.body.scrollTop=document.getElementById(id).offsetTop-150
+				});
+				$("input[name=\"plate_xici\"]").click(function(){
+					if(this.checked){
+						$("input[name=\"plate_xici_input\"]").focus();
+					}else{
+						$("input[name=\"plate_xici_input\"]").attr("value","");
+					}
+				})
+				$("input[name=\"plate_longhu\"]").click(function(){
+					if(this.checked){
+						$("input[name=\"plate_longhu_input\"]").focus();
+					}else{
+						$("input[name=\"plate_longhu_input\"]").attr("value","");
+					}
+				})
+				$("input[name=\"plate_baidu\"]").click(function(){
+					if(this.checked){
+						$("input[name=\"plate_baidu_input\"]").focus();
+					}else{
+						$("input[name=\"plate_baidu_input\"]").attr("value","");
+					}
+				})
+				$("input[name=\"plate_njshenghuo\"]").click(function(){
+					if(this.checked){
+						$("input[name=\"plate_njshenghuo_input\"]").focus();
+					}else{
+						$("input[name=\"plate_njshenghuo_input\"]").attr("value","");
+					}
+				})
+				$("input[name=\"plate_other\"]").click(function(){
+					if(this.checked){
+						$("input[name=\"plate_other_input\"]").focus();
+					}else{
+						$("input[name=\"plate_other_input\"]").attr("value","");
+					}
+				})
+				$("input[name=\"software_other\"]").click(function(){
+					if(this.checked){
+						$("input[name=\"software_other_input\"]").focus();
+					}else{
+						$("input[name=\"software_other_input\"]").attr("value","");
+					}
+				})
+				$("input[name=\"social_other\"]").click(function(){
+					if(this.checked){
+						$("input[name=\"social_other_input\"]").focus();
+					}else{
+						$("input[name=\"social_other_input\"]").attr("value","");
+					}
+				});
+				//第二张表单提高用户体验
+				$(".interface").click(function(){
+					var id=$("#interface").attr("id");
+					var id1=$("#backstage_value1").attr("id");
+				   document.body.scrollTop=document.getElementById(id).offsetTop+document.getElementById(id1).offsetTop-150
+				});
+				$(".mastery").click(function(){
+					var id=$("#mastery").attr("id");
+				   var id1=$("#backstage_value1").attr("id");
+				   document.body.scrollTop=document.getElementById(id).offsetTop+document.getElementById(id1).offsetTop-150
+				});
+				$(".short_dump").click(function(){
+					var id=$("#short_dump").attr("id");
+				   var id1=$("#backstage_value1").attr("id");
+				   document.body.scrollTop=document.getElementById(id).offsetTop+document.getElementById(id1).offsetTop-150
+				});
+				$(".speed").click(function(){
+					var id=$("#speed").attr("id");
+				   var id1=$("#backstage_value1").attr("id");
+				   document.body.scrollTop=document.getElementById(id).offsetTop+document.getElementById(id1).offsetTop-150
+				});
+				//第三张表单提高用户体验
+				$(".feature").click(function(){
+					var id=$("#feature").attr("id");
+				    var id1=$("#backstage_value2").attr("id");
+				   document.body.scrollTop=document.getElementById(id).offsetTop+document.getElementById(id1).offsetTop-150
+				});
+				$(".notlikeFeature").click(function(){
+					var id=$("#notlikeFeature").attr("id");
+				 var id1=$("#backstage_value2").attr("id");
+				   document.body.scrollTop=document.getElementById(id).offsetTop+document.getElementById(id1).offsetTop-150
+				});
+				$(".reasonable").click(function(){
+					var id=$("#reasonable1").attr("id");
+				 var id1=$("#backstage_value2").attr("id");
+				   document.body.scrollTop=document.getElementById(id).offsetTop+document.getElementById(id1).offsetTop-150
+				});
+				$(".bbsreasonable").click(function(){
+					var id=$("#bbsreasonable1").attr("id");
+				 var id1=$("#backstage_value2").attr("id");
+				   document.body.scrollTop=document.getElementById(id).offsetTop+document.getElementById(id1).offsetTop-150
+				});
+				$(".imreasonable").click(function(){
+					var id=$("#imreasonable1").attr("id");
+				 var id1=$("#backstage_value2").attr("id");
+				   document.body.scrollTop=document.getElementById(id).offsetTop+document.getElementById(id1).offsetTop-150
+				});
+				$("input[name=\"notlikeFeature_other\"]").click(function(){
+					if(this.checked){
+						$("input[name=\"notlikeFeature_advice\"]").focus();
+					}else{
+						$("input[name=\"notlikeFeature_advice\"]").attr("value","");
+					}
+				});
+				$("#reasonable").click(function(){
+					if(this.checked){
+						$("input[name=\"reasonable_advice\"]").focus();
+					}else{
+						$("input[name=\"reasonable_advice\"]").attr("value","");
+					}
+				});
+				$("#bbsreasonable").click(function(){
+					if(this.checked){
+						$("input[name=\"bbsreasonable_advice\"]").focus();
+					}else{
+						$("input[name=\"bbsreasonable_advice\"]").attr("value","");
+					}
+				});
+				$("#imreasonable").click(function(){
+					if(this.checked){
+						$("input[name=\"imreasonable_advice\"]").focus();
+					}else{
+						$("input[name=\"imreasonable_advice\"]").attr("value","");
+					}
+				});
+				
+				//提交表单
+				$("#household_go").click(function() {
+					//第一张表单的提交
+					if($("#time1").html()=="0时0分0秒"&&firstForm==true){
+					var jsonData = $("#household_form").serializeJson();
+//					console.info(jsonData); //打印所有的对象
+					for (var f = 0; f < document.forms.length; f++) {
+						var form = document.forms[f];
+						if (form.name == "live" && form.value == jsonData.live) {
+							$(form).attr("checked", "checked");
+						} else if (form.value == jsonData.plate_xici) {
+							$(form).attr("checked", "checked");
+						} else if (form.value == jsonData.plate_longhu) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.plate_baidu) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.plate_njshenghuo) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.plate_other) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.software_attestation) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.software_im) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.software_bbs) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.software_business) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.software_other) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.social_residence) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.social_pay) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.social_identity) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.social_other) {
+							$(form).attr("checked", "checked");
+						}
+						else {
+							$(form).removeAttr("checked");
+						}
+					}
+					$("input[name=\"plate_xici_input\"]").attr("value", jsonData.plate_xici_input);
+					$("input[name=\"plate_longhu_input\"]").attr("value", jsonData.plate_longhu_input);
+					$("input[name=\"plate_baidu_input\"]").attr("value", jsonData.plate_baidu_input);
+					$("input[name=\"plate_njshenghuo_input\"]").attr("value", jsonData.plate_njshenghuo_input);
+					$("input[name=\"plate_other_input\"]").attr("value", jsonData.plate_other_input);
+					$("input[name=\"software_other_input\"]").attr("value", jsonData.software_other_input);
+					$("input[name=\"social_other_input\"]").attr("value", jsonData.social_other_input);
+					document.getElementById("action").innerText = $("#action").val();
+					var backstage_value = $("#backstage_value").html();
+					if(jsonData.live==undefined){
+						alert("第一题请选择答案");
+					}else if(jsonData.plate_xici==undefined&&jsonData.plate_longhu==undefined&&jsonData.plate_baidu==undefined&&jsonData.plate_njshenghuo==undefined&&jsonData.plate_other==undefined){
+						alert("第二题至少选一个");
+					}else if(jsonData.software_attestation==undefined&&jsonData.software_im==undefined&&jsonData.software_bbs==undefined&&jsonData.software_business==undefined&&jsonData.software_other==undefined){
+						alert("第三题至少选一个");
+					}else if(jsonData.social_residence==undefined&&jsonData.social_pay==undefined&&jsonData.social_identity==undefined&&jsonData.social_other==undefined){
+						alert("第四题至少选一个");
+					}else if($("#action").val()==""){
+						alert("请填写第五题");
+					}else if(jsonData.plate_xici!=undefined&&jsonData.plate_xici_input==""){
+						alert("请填写板块名称");
+						$("input[name=\"plate_xici_input\"]").focus();
+					}
+					else if(jsonData.plate_xici!=undefined&&jsonData.plate_xici_input==""){
+						alert("请填写板块名称");
+						$("input[name=\"plate_xici_input\"]").focus();
+					}else if(jsonData.plate_longhu!=undefined&&jsonData.plate_longhu_input==""){
+						alert("请填写板块名称");
+						$("input[name=\"plate_longhu_input\"]").focus();
+					}
+					else if(jsonData.plate_baidu!=undefined&&jsonData.plate_baidu_input==""){
+						alert("请填写板块名称");
+						$("input[name=\"plate_baidu_input\"]").focus();
+					}
+					
+					else if(jsonData.plate_njshenghuo!=undefined&&jsonData.plate_njshenghuo_input==""){
+						alert("请填写板块名称");
+						$("input[name=\"plate_njshenghuo_input\"]").focus();
+					}
+					else if(jsonData.plate_other!=undefined&&jsonData.plate_other_input==""){
+						alert("请填写板块名称");
+						$("input[name=\"plate_other_input\"]").focus();
+					}
+					else if(jsonData.software_other!=undefined&&jsonData.software_other_input==""){
+						alert("请填写你认为应该加强的方面");
+						$("input[name=\"software_other_input\"]").focus();
+					}
+					else if(jsonData.social_other!=undefined&&jsonData.social_other_input==""){
+						alert("请填写你认为可行的方式");
+						$("input[name=\"social_other_input\"]").focus();
+					}
+					else{
+						alert("into_next");
+						console.log(backstage_value);
+						firstForm=false;
+//					document.getElementById("test").innerHTML=backstage_value;
+//					$("#household_form").css("display","none");
+						$.ajax({
+							type:"post",
+							url:"",
+							data:backstage_value,
+							success:function(){
+								
+							},
+							error:function(){
+								
+							}
+						});
+					}	
+					}else if($("#time1").html()!="0时0分0秒"){
+						alert("sorry~您还剩"+$("#time1").html()+"才可以提交问卷");
+					}else if(firstForm==false){
+						alert("很抱歉，您已经提交过第一份问卷，感谢您的支持");
+					}
+				});
+			    $("#household_go1").click(function() {
+			    	//第二张表单的提交
+					if($("#time2").html()=="0时0分0秒"){
+					var jsonData = $("#household_form1").serializeJson();
+					//					console.info(jsonData); //打印所有的对象
+					for (var f = 0; f < document.forms1.length; f++) {
+						var form = document.forms1[f];
+						if (form.name == "interface" && form.value == jsonData.interface) {
+							$(form).attr("checked", "checked");
+						} else if (form.name == "mastery" && form.value == jsonData.mastery) {
+							$(form).attr("checked", "checked");
+						} else if (form.name == "short_dump" && form.value == jsonData.short_dump) {
+							$(form).attr("checked", "checked");
+						} else if (form.name == "speed" && form.value == jsonData.speed) {
+							$(form).attr("checked", "checked");
+						} else {
+							$(form).removeAttr("checked");
+						}
+					}
+					$("input[name=\"interface_advice\"]").attr("value", jsonData.interface_advice);
+					document.getElementById("suggest").innerText = $("#suggest").val();
+					var backstage_value = $("#backstage_value1").html();
+					 if(jsonData.interface==undefined){
+						alert("第一题请选择答案");
+					}else if(jsonData.mastery==undefined){
+						alert("第二题请选择答案");
+					}else if(jsonData.short_dump==undefined){
+						alert("第三题请选择答案");
+					}else if(jsonData.speed==undefined){
+						alert("第四题请选择答案");
+					}else if (jsonData.suggest == "") {
+						$("#suggest").focus();
+						alert("请填写建议");
+					} else {
+						alert("into_next");
+						console.log(backstage_value);
+					
+						$.ajax({
+							type:"post",
+							url:"",
+							data:backstage_value,
+							success:function(){
+								
+							},
+							error:function(){
+								
+							}
+						});
+					}
+					//document.getElementById("test").innerHTML=backstage_value;
+					//$("#household_form").css("display","none")
+				
+					}else{
+						alert("sorry~您还剩"+$("#time2").html()+"才可以提交问卷");
+					}
+					
+			    });
+			    $("#household_go2").click(function() {
+			    	//第三章表单的提交
+					if($("#time3").html()=="0时0分0秒"){
+						var jsonData = $("#household_form2").serializeJson();
+//					console.info(jsonData); //打印所有的对象
+					for (var f = 0; f < document.forms2.length; f++) {
+						var form = document.forms2[f];
+						 if (form.value == jsonData.feature_windmill) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.feature_bbs) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.feature_im) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.feature_call) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.notlikeFeature_index) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.notlikeFeature_myHouse) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.notlikeFeature_approve) {
+							$(form).attr("checked", "checked");
+						}else if (form.value == jsonData.notlikeFeature_other) {
+							$(form).attr("checked", "checked");
+						}
+						else if (form.name == "reasonable" && form.value == jsonData.reasonable) {
+							$(form).attr("checked", "checked");
+						}
+						else if (form.name == "bbsreasonable" && form.value == jsonData.bbsreasonable) {
+							$(form).attr("checked", "checked");
+						}
+						else if (form.name == "imreasonable" && form.value == jsonData.imreasonable) {
+							$(form).attr("checked", "checked");
+						}else {
+							$(form).removeAttr("checked");
+						}
+					}
+					$("input[name=\"notlikeFeature_advice\"]").attr("value", jsonData.notlikeFeature_advice);
+					$("input[name=\"reasonable_advice\"]").attr("value", jsonData.reasonable_advice);
+					$("input[name=\"bbsreasonable_advice\"]").attr("value", jsonData.bbsreasonable_advice);
+					$("input[name=\"imreasonable_advice\"]").attr("value", jsonData.imreasonable_advice);
+					document.getElementById("add_action").innerText = $("#add_action").val();
+					document.getElementById("strong_action").innerText = $("#strong_action").val();
+					
+					var backstage_value = $("#backstage_value2").html();
+					if(jsonData.feature_windmill==undefined&&jsonData.feature_bbs==undefined&&jsonData.feature_im==undefined&&jsonData.feature_call==undefined){
+						alert("第一题至少选一个");
+					}else if(jsonData.notlikeFeature_index==undefined&&jsonData.notlikeFeature_myHouse==undefined&&jsonData.notlikeFeature_approve==undefined&&jsonData.notlikeFeature_other==undefined){
+						alert("第二题至少选一个");
+					}else if(jsonData.reasonable==undefined){
+						alert("第三题至少选一个");
+					}else if(jsonData.bbsreasonable==undefined){
+						alert("第四题至少选一个");
+					}else if(jsonData.bbsreasonable==undefined){
+						alert("第五题至少选一个");
+					}else if($("#add_action").val()==""){
+						alert("请填写第六题");
+					}else if($("#strong_action").val()==""){
+						alert("请填写第七题");
+					}else if(jsonData.notlikeFeature_other!=undefined&&jsonData.notlikeFeature_advice==""){
+						alert("请填写您认为不好的功能");
+						$("input[name=\"notlikeFeature_advice\"]").focus();
+					}else if(jsonData.reasonable=="不合理，您的建议"&&jsonData.reasonable_advice==""){
+						alert("请填写您认为设计不合理的地方");
+						$("input[name=\"reasonable_advice\"]").focus();
+					}else if(jsonData.bbsreasonable=="不合理，您的建议"&&jsonData.bbsreasonable_advice==""){
+						alert("请填写您认为小区论坛排版不合理的地方");
+						$("input[name=\"bbsreasonable_advice\"]").focus();
+					}else if(jsonData.imreasonable=="不合理，您的建议"&&jsonData.imreasonable_advice==""){
+						alert("请填写您认为IM布局不合理的地方");
+						$("input[name=\"imreasonable_advice\"]").focus();
+					}else if(jsonData.add_action==""){
+						alert("请填写您认为应该增加的功能");
+						$("input[name=\"add_action\"]").focus();
+					}else if(jsonData.strong_action==""){
+						alert("请填写您认为APP应该加强的地方");
+						$("input[name=\"strong_action\"]").focus();
+					}
+					else{
+						alert("into_next");
+						console.log(backstage_value);
+//					document.getElementById("test").innerHTML=backstage_value;
+//					$("#household_form").css("display","none");
+						$.ajax({
+							type:"post",
+							url:"",
+							data:backstage_value,
+							success:function(){
+								
+							},
+							error:function(){
+								
+							}
+						});
+					}
+					}if($("#time3").html()!="0时0分0秒"){
+						alert("sorry~您还剩"+$("#time3").html()+"才可以提交问卷");
+					}
+				
+			    });
+			})
+		</script>
+	</body>
+
+</html>

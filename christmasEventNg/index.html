@@ -1,0 +1,107 @@
+<html ng-app="christmasEvent">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>一家联手圣诞老人给您送礼</title>
+    <link rel="stylesheet" href="css/christmasEvent.css" />
+    <script src="http://libs.baidu.com/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js" ></script>
+    <script type="text/javascript" src="js/createjs.js" ></script>
+    <script type="text/javascript" src="js/christmasEvent_1.js" id="sc"></script>
+    <script type="text/javascript" src="js/snow.js"></script>
+</head>
+<script>
+
+
+</script>
+<body ng-controller="christmasEvent" >
+	<!--選擇-->
+	
+	<div class="snow-container" id="snow-container" style="z-index: 2;"></div>
+	<div class="page choose" style="background-image: url(img/choosebg.png);">
+		<div class="choose_look" id="choose_look" >
+			<img class="choose_top_img" src="img/choose_top.png"style="width: 100%;" />
+		</div>
+		<div class="choose_tree">
+			<img src="img/choose_tree.png" class="tree1"/>
+			<img src="img/choose_tree1.png" class="tree2"/>
+			<img src="img/choose_tree2.png" class="tree3"/>
+		</div>
+	</div>
+<!--第一页-->
+<div class="page page1" style="display: none;">
+	<input type="hidden" id="clickMe" />
+	<!--<audio id="audio" src="toy_mono.wav">-->
+		
+	</audio>
+	<div class="page1_top">
+	<img class="page1_title" src="img/title.png"/>
+	<div class="page1_text">圣诞公公</div>
+	</div>
+	<img src="img/tree.png" class="page1_tree" />
+	<!--<img src="img/snow_.png" class="page1_snow" style="width: 100%;" />-->
+	<div class="page1_click">
+	<div class="page1_button"style="background-color: #15bcf0;" id="refuse">
+		拒绝
+	</div>
+	<div  class="page1_button" id="answer" style="background-color: #ff4444;margin-left: 10%;">
+		接听
+	</div>
+	</div>
+	<img class="page1_bottom" src="img/bar.png"/>
+</div>
+<!--第二页-->
+<div class="page page2" style="display: none;">
+	<div class="go_next">跳过</div>
+	<!--<div  id="snow-container1" style="z-index:2;"></div>-->
+	<div class="page1_top">
+	<img class="page1_title"src="img/title.png"/>
+	<div class="page1_text">圣诞公公</div>
+	</div>
+	<div class="time">00:<font id="time_">0</font><font id="time">0</font></div>
+	<img src="img/tree.png" class="page1_tree" />
+	<!--<img src="img/snow_.png" class="page1_snow" style="width: 100%;" />-->
+	<div class="page1_click">
+	
+	<div class="page1_button" id="dropped" style="background-color: #ff4444;width: 80%;margin-left: 10%;">
+		挂断
+	</div>
+	</div>
+	<img class="page1_bottom" src="img/bar.png"/>
+</div>
+<!--第三页-->
+<div class="page page3" style="display: none;">
+	<img src="img/page3_top.png" class="page3_top"/>
+	<div class="gift_closed">
+		<div class="gift_click">
+	<div class="page3_text">点击拆礼物</div>
+	<img src="img/page_giftClosed.png" class="page3_figtClosed" />
+	</div>
+	<div class="rule" id="rule">规则？</div>
+	</div>
+	<img src="img/bar.png" class="page3_bar" />
+	<div class="gift_open_bg" style="display: none;">
+		<div class="gift_open_border">
+			<img src="img/page3_border.png" />
+			<div class="gift_open_text">恭喜您<br/>获得<font id="prizeName" style="color: #ff4444;">xxxxxxxxx</font></div>
+			<div class="closed" id="closed">X</div>
+			<img class="gift_open_" src="img/page3_gift_open.png"style="width: 40%;" />
+			<div id="hasPrize" style="width: 100%;text-align: center;color: #FF4444;position: relative;z-index: 3;top: 38%;">您已经拆过该礼盒</div>
+		</div>
+	</div>
+	<div class="rulepage" id="rulepage" style="display: none;">
+		<div class="rulepage_text">
+			<h1>活动规则</h1>
+			1.每位用户活动期间只能获得一次拆开礼物的机会；<br />
+2.获得的礼品的领奖方式会在3个工作日内以系统消息形式通知，请及时关注；<br />
+3.活动时间：2015.12.22-12.26；<br />
+4.活动对象：威尼斯水城十四、十五街区认证用户；<br />
+5.一家对本活动有最终解释权。<br />
+
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

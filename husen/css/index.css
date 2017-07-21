@@ -1,0 +1,193 @@
+     html {
+     	background-color: #252525;
+     }
+     body {
+     	margin: 0;
+     	padding: 0;
+     	height: 100%;
+     }
+     .wrapper-scroll {
+     	-webkit-overflow-scrolling: touch;
+     	overflow-scrolling: touch;
+     	overflow: auto;
+     	position: absolute;
+     	top: 0;
+     	bottom: 0;
+     	left: 0;
+     	right: 0;
+     }
+     .content {
+     	width: 3862px;
+     	width: -moz-max-content;
+     	width: -webkit-max-content;
+     	width: -o-max-content;
+     	width: -ms-max-content;
+     	width: max-content;
+     	position: absolute;
+     	top: 27%;
+     	left: 60px;
+     }
+    
+     h1 {
+     	font-family: 'Segoe ui 8';
+     	font-size: 3.3em;
+     	margin-top: 0.3em;
+     	margin-left: 1.5em;
+     	color: whitesmoke;
+     }
+     .section {
+     	float: left;
+     	overflow: hidden;
+     	width: 30em;
+     	margin-left: 10px;
+     }
+     .article {
+     	float: left;
+     	width: 9em;
+     	height: 8em;
+     	margin: .2em;
+     	background-color: #C40C20;
+     	box-shadow: 0 1px 50px 2px black;
+     }
+     .article1 {
+     	float: left;
+     	width: 18.4em;
+     	height: 8em;
+     	margin: .2em;
+     	background-color: #C40C20;
+     	box-shadow: 0 1px 50px 3px black;
+     }
+    .arti1 .article,.article1 {
+     	background-color: #006ac1;
+     }
+      
+    .arti2 .article,.arti2 .article1 {
+     	background-color: #78ba00;
+     }
+     
+     .arti3 .article,.arti3 .article1 {
+     	background-color: #7200ac;
+     }
+     .arti4 .article,.arti4 .article1 {
+     	background-color:  #D39d09;
+     }
+     .arti5 .article,.arti5 .article1{
+     	background-color: #c1004f;
+     }
+     .arti6 .article,.arti6 .article1 {
+     	background-color: #78ba00;
+     }
+     .arti7 .article,.arti7 .article1 {
+     	background-color: #006ac1;
+     }
+     .arti8 .article,.arti8 .article1 {
+     	background-color: #c1004f;
+     }
+     
+     .header {
+     	position: absolute;
+     	top: 100px;
+     	width: 3862px;
+     }
+     .article:hover {
+     	border: 3px solid white;
+     	-webkit-transform: rotate(3deg);
+     }
+     
+     .article1:hover {
+     	border: 3px solid white;
+     	-webkit-transform: rotate(-1deg);
+     }
+     .article1:hover .tier2 {
+     	display: block;
+     	-webkit-animation: tier2 0.2s
+     }
+     .article1:hover .tier3 {
+     	opacity: 1;
+     	-webkit-animation: tier3 0.2s
+     }
+     .article:hover .tier2 {
+     	display: block;
+     	-webkit-animation: tier2 0.2s
+     }
+     .article:hover .tier3 {
+     	opacity: 1;
+     	-webkit-animation: tier3 0.2s
+     }
+     @-webkit-keyframes tier2 {
+     	from {
+     		opacity: 0;
+     	}
+     	to {
+     		opacity: 1;
+     	}
+     }
+     @-webkit-keyframes tier3 {
+     	from {
+     		left: 0px;
+     	}
+     	to {
+     		left: 30px;
+     	}
+     }
+     h1 {
+     	-webkit-animation: title1 5s infinite linear;
+     	position: relative;
+     }
+     @-webkit-keyframes title1 {
+     	0% {
+     		-webkit-transform: rotateX(30deg);
+     	}
+     	25% {
+     		-webkit-transform: rotateX(0deg);
+     	}
+     	50% {
+     		-webkit-transform: rotatey(10deg);
+     	}
+     	75% {
+     		-webkit-transform: rotatey(0deg);
+     	}
+     	100% {
+     		-webkit-transform: rotatex(30deg);
+     	}
+     }
+     .action1 {
+     	-webkit-animation: action 0.1s;
+     }
+     .action2 {
+     	-webkit-animation: action 0.5s;
+     }
+     .action3 {
+     	-webkit-animation: action 2s;
+     }
+     @-webkit-keyframes action {
+     	from {
+     		-webkit-transform: rotatey(30deg);
+     	}
+     	to {
+     		-webkit-transform: rotatey(0deg);
+     	}
+     }
+     .sectit {
+     	color: whitesmoke;
+     	font-family: 'Segoe ui 8';
+     	font-size: 1.6em;
+     	margin-bottom: 0.7em;
+     	width: 70px;
+     	color: #f1ebe5;
+     	font-weight: bold;
+     	text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+     	-webkit-animation: shadow 4s infinite linear;
+     }
+     @-webkit-keyframes shadow {
+     	0% {
+     		text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+     	}
+     	50% {
+     		text-shadow: 0px 0px 0px #fff;
+     	}
+     	100% {
+     		text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+     	}
+     }
+li{float: left;}

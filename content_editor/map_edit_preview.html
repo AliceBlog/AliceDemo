@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html ng-app="communityPreview">
+<head>
+<meta charset="UTF-8">
+<title>场景预览</title>
+</head>
+<script type="text/javascript" src="./js/jquery-1.8.0.min.js" ></script>
+<script type="text/javascript" src="./js/angular.min.js" ></script>
+
+<script type="text/javascript">
+var previewValue;
+
+
+function preview_(){
+	preview=window.parent.previewValue;
+}
+preview_();
+
+</script>
+<style>
+body{
+width: 100%;
+height: 100%;
+overflow: hidden; 
+}
+.arena{
+position: relative;
+left: 0px;
+}
+.layer{
+position: absolute;
+top:0px;
+left:0px;
+}
+.choose,.shopchoose{
+position: absolute;
+top:0px;
+left:0px;
+z-index: 0;
+overflow: hidden;
+opacity:0;
+}
+.choose img,.shopchoose img{
+position: absolute;
+}
+.spiritShow{
+font-weight:bold;
+display:none;
+			-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.1) inset;
+			-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+width: 250px;
+height: 150px;
+background-color: #fdfdfd;
+position: fixed;
+z-index: 900000;
+border-radius: 10px;
+}
+.spiritShow: before,
+		.spiritShow: after {
+			content: "";
+			position: absolute;
+			z-index: -2;
+			bottom: 15px;
+			left: 10px;
+			width: 50%;
+			height: 20%;
+			max-width: 300px;
+			-webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+			-moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+			box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+			-webkit-transform: rotate(-3deg);
+			-moz-transform: rotate(-3deg);
+			-o-transform: rotate(-3deg);
+			transform: rotate(-3deg);
+		}
+.spiritShowTitle{
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+width: 100%;
+padding-bottom: 5px;
+padding-top: 5px;
+text-align: center;
+-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow: 0 1px 4px rgba(0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+box-shadow: 0 1px 4px rgba(0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.spiritShowMore{
+margin-left: 10%;
+
+}
+.showMore{
+margin-top: 10%;
+}
+</style>
+<body ng-controller="previewCtrl" ng-mouse-wheel-up="changeSize('up')" ng-mouse-wheel-down="changeSize('down')" ng-keydown="keydown($event)"ng-keyup="keyUp($event)">
+<!-- 信息展示 -->
+<!-- 房屋类型：，房屋名称： -->
+<div class="spiritShow">
+<div class="spiritShowTitle">房屋信息名片</div>
+<div class="spiritShowMore">
+<div class="showMore">房屋名称：{{spiritShow.name}}</div>
+<div class="showMore">房屋类型：{{spiritShow.spriteType|typeShow}}</div>
+</div>
+</div>
+
+<!--场景地图-->
+<div class="arena" id="divMap" ng-mousemove="hasMouse($event)">
+<!-- 商铺钻石 -->
+<div id="shop_choose" class="choose"><img src="./img/shop.png"/></div>
+<!-- 楼栋钻石 -->
+<div id="building_choose" class="choose"><img src="./img/building.png"/></div>
+<!-- 商铺礼花 -->
+<div id="paper_choose" class="shopchoose"><img src="./img/paper.png"/></div>
+			<div ng-repeat="layer in mapcontent.layers track by $index" is-over="toggle.now" class="layer" ng-style="getLayerStyle(layer);"ng-show="layer.minScale&lt;=changeNumber&&changeNumber&lt;layer.maxScale">
+		    <div ng-repeat="spirit in layer.sprites track by $index" title="{{spirit.name}}" class="spirit" ng-style="getEditStyle(spirit)" type="{{spirit.spriteType}}" ng-click="chooseSpirit(spirit)">
+            <div ng-repeat="style in spirit.styleList" ng-style="getSpiritStyle(style)"ng-show="style.minScale&lt;=changeNumber&&changeNumber&lt;style.maxScale" id="spirit{{spirit.id}}_style{{$index}}" class="spirit{{spirit.id}}_style{{$index}}">
+		    <div  ng-repeat="animate in spirit.animations track by $index" ng-style="aniStyle(animate)" >
+		   <div ng-style="animateStyle(animate)" id="spirit{{spirit.id}}_animate{{$index}}" class="spirit{{spirit.id}}_animate{{$index}}"></div>
+		   
+		   </div>
+			
+		    </div>
+		   </div> 
+			</div>
+			</div>
+</body>
+
+<script type="text/javascript" src="./js/jquery.event.ue.js" ></script>
+<script type="text/javascript" src="./js/jquery.udraggable.js" ></script>
+<script type="text/javascript" src="./js/map_edit_preview.js" ></script>
+</html>

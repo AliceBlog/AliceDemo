@@ -1,0 +1,25 @@
+{
+	"records": [
+		{
+			"icon": "img/list1.png",
+			"title": "五月花抽紙200抽一包",
+			"glodNum": "300",
+			"prizeNum":"20"
+		},{
+			"icon": "img/list_2.png",
+			"title": "五月花抽紙200抽一包",
+			"glodNum": "300",
+			"prizeNum":"20"
+		},{
+			"icon": "img/list_3.png",
+			"title": "五月花抽紙200抽一包",
+			"glodNum": "300",
+			"prizeNum":"20"
+		},{
+			"icon": "img/list.png",
+			"title": "五月花抽紙200抽一包",
+			"glodNum": "300",
+			"prizeNum":"20"
+		}
+	]
+}

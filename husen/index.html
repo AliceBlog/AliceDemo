@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="HandheldFriendly" content="True">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta http-equiv="cleartype" content="on">
+		<title>husen</title>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.dragsort-0.5.2.js"></script>
+		<script type="text/javascript" src="js/ns.hover.min.js"></script>
+
+		<link rel="stylesheet" href="css/linkstyles.css" />
+		<link rel="stylesheet" href="css/index.css" />
+
+		<script type="text/javascript" src="js/index.js"></script>
+
+	</head>
+
+	<body>
+		<div id="wrapper" class="wrapper-scroll">
+			<h1 id="title" style="position: fixed;">title</h1>
+			<div class="header">
+				<hr style="height:1px;border:none;border-top:3px groove whitesmoke;" />
+			</div>
+			<button id="change_style">点我切换风格</button>
+			<div class="content ">
+				<!--
+                	可以重写section的width，默认为30em
+                -->
+
+				<div class="section container arti1" style="width: 40em; ">
+					<div class="sectit pinned ">分类1</div>
+					<div class="article1 action1" style="background-color: #00b6de;"></div>
+					<div class="article action2" style="background-color:#56dea7;"></div>
+					<div class="article action3" style="background-color:#ff7659;"></div>
+					<div class="article action2" style="background-color:#f8cd36;"></div>
+					<div class="article1 action3" style="background-color:#f26175;"></div>
+					<div class="article action1" style="background-color:#5ca7df;"></div>
+					<div class="article action2" style="background-color:#f26175;"></div>
+					<div class="article action1" style="background-color:#f26175;"></div>
+					<div class="article action3" style="background-color:#5ca7df;"></div>
+
+				</div>
+
+				<div class="section container arti2" style="width: 40em;">
+
+					<div class="sectit pinned ">分类2</div>
+					<div class="article action2 "></div>
+					<div class="article1 action3 "></div>
+					<div class="article action2 "></div>
+					<div class="article action1 "></div>
+					<div class="article action3 "></div>
+					<div class="article action2 "></div>
+					<div class="article action2 "></div>
+					<div class="article action1 "></div>
+					<div class="article action3 "></div>
+
+				</div>
+
+				<div class="arti3 section container">
+					<div class="sectit pinned">分类3</div>
+					<div class="article action1"></div>
+					<div class="article action2"></div>
+					<div class="article action3"></div>
+					<div class="article action1"></div>
+					<div class="article action1"></div>
+					<div class="article action2"></div>
+					<div class="article action3"></div>
+					<div class="article action2"></div>
+					<div class="article action3"></div>
+				</div>
+
+				<div class="arti4 section container">
+					<div class="sectit pinned">分类4</div>
+					<div class="article action2"></div>
+					<div class="article action1"></div>
+					<div class="article action2"></div>
+					<div class="article action3"></div>
+					<div class="article action1"></div>
+					<div class="article action2"></div>
+					<div class="article action2"></div>
+					<div class="article action3"></div>
+					<div class="article action2"></div>
+				</div>
+
+				<div class="arti5 section container">
+					<div class="sectit pinned">分类5</div>
+					<div class="article action2"></div>
+					<div class="article action3"></div>
+					<div class="article action2"></div>
+					<div class="article action1"></div>
+					<div class="article action2"></div>
+					<div class="article action3"></div>
+					<div class="article action2"></div>
+					<div class="article action1"></div>
+					<div class="article action2"></div>
+				</div>
+				<div class="arti6 section container">
+					<div class="sectit pinned">分类6</div>
+					<div class="article action2"></div>
+					<div class="article action3"></div>
+					<div class="article action2"></div>
+					<div class="article action1"></div>
+					<div class="article action2"></div>
+					<div class="article action3"></div>
+					<div class="article action2"></div>
+					<div class="article action1"></div>
+					<div class="article action2"></div>
+				</div>
+				<div class="arti7 section container">
+					<div class="sectit pinned">分类7</div>
+					<div class="article action2"></div>
+					<div class="article action3"></div>
+					<div class="article action2"></div>
+					<div class="article action1"></div>
+					<div class="article action2"></div>
+					<div class="article action3"></div>
+					<div class="article action2"></div>
+					<div class="article action1"></div>
+					<div class="article action2"></div>
+				</div>
+				<div class="arti8 section container">
+					<div class="sectit pinned">分类8</div>
+					<div class="article action2"></div>
+					<div class="article action3"></div>
+					<div class="article action2"></div>
+					<div class="article action1"></div>
+					<div class="article action2"></div>
+					<div class="article action3"></div>
+					<div class="article action2"></div>
+					<div class="article action1"></div>
+					<div class="article action2"></div>
+				</div>
+
+			</div>
+		</div>
+		<script src="build.js"></script>
+		<script>
+			window.onload = function() {
+				$.noConflict();
+				jQuery(document).ready(function($) {
+					$('.action2').nsHover({
+						scaling: false, //div缩放大小(number)
+						speed: 'circle',
+						rounded: 'normal', //根據div形狀circle（）圓
+						bgcolor: '#000',
+						bgopacity: 0.5, //遮罩層透明度            
+						bgpic: '', //icon地址
+						//    bgsize : '1%',
+						bganim: 'slide', //fade、slide、scale
+						shadow: false,
+						content: '<div class="content" >Click Here</div>' //自定义文本内容
+					});
+					$('.action1').nsHover({
+						scaling: 0.9, //div缩放大小(number)
+						speed: 'circle',
+						rounded: 'normal', //根據div形狀circle（）圓
+						bgcolor: '#000',
+						bgopacity: 0.5, //遮罩層透明度            
+						bgpic: '', //icon地址
+						//    bgsize : '1%',
+						bganim: 'scale', //fade、slide、scale
+						shadow: false,
+						content: '<div class="content" >Click Here</div>' //自定义文本内容
+					});
+					$('.action3').nsHover({
+						scaling: false, //div缩放大小(number)
+						speed: 'circle',
+						rounded: 'normal', //根據div形狀circle（）圓
+						bgcolor: '#000',
+						bgopacity: 0.5, //遮罩層透明度            
+						bgpic: '', //icon地址
+						//    bgsize : '1%',
+						bganim: 'fade', //fade、slide、scale
+						shadow: false,
+						content: '<div class="content" >Click Here</div>' //自定义文本内容
+					});
+				})
+			}
+		</script>
+	</body>
+
+</html>

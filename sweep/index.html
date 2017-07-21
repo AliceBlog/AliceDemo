@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/sweep.css" />
+    <script type="text/javascript" src="js/jquery-1.8.0.min.js" ></script>
+</head>
+<body>
+<div class="sweep_page1">
+<div class="sweep_bj"><img src="img/bei.png"/></div>
+<div class="sweep_tel"><input type="text" id="sweep_tel" placeholder="输入手机号后开启活动"/></div>
+<div class="sweep_button1 sweep_button" id="activity">发起活动</div>
+<div class="sweep_button2 sweep_button" id="sweep_button2">公测活动详情</div>
+<div class="sweep_p1_text">点击"发起活动"开始抢流量吧</div>
+<div class="sweep_page1_window">
+	<div class="sweep_page1_window_back">返回</div>
+	<iframe src="all_introduction.html"></iframe>
+</div>
+</div>
+<div class="sweep_page2">
+	<div class="sweep_bj"><img src="img/bg.png"/></div>
+	<div class="sweep_logo"><img src="img/teits.png"/></div>
+	<div class="sweep_text">社区<br />安全社交</div>
+	<div class="sweep_ball"><div class="sweep_ball_text">在一分钟内邀请好友扫描二维码<br/>即可获得30M手机流量<br/>现在开始吧</div></div>
+	<div class="sweep_time" ><font id="time_init">00:</font><font id="sweep_time">60</font></div>
+	<div class="code"></div>
+</div>
+<div class="sweep_page3">
+	<div class="time_out">还没让友友扫到？带上你的火箭，再来一次！</div>
+	<div class="time_bottom" id="time_bottom">继续助力</div>
+</div>
+<div class="sweep_loading">
+    <div class="sweep_loading_title">一家</div>
+    <div class="sweep_loading_all"><img src="img/circle.png" class="sweep_loading_1"/>
+    <img src="img/jine.png" class="sweep_loading_2" />
+   
+    </div>
+     <div class="loading_progress"><font id="progress">0</font>%</div>
+    <div class="sweep_bottom">即将开始流量抢购模式</div>
+</div>
+<script type="text/javascript">
+var time;
+function run(){
+	var s = document.getElementById("sweep_time");
+	if(s.innerHTML<=10){
+		$("#time_init").text("00:0");
+	}else{
+		$("#time_init").text("00:");
+	}
+	
+	if (s.innerHTML==0) {
+		s.innerHTML=60;
+		$(".sweep_page3").css("display","block");
+		$("#time_init").text("00:");
+		s.innerHTML=60;
+		window.clearInterval(time); 
+		return;
+	} else{
+		
+		s.innerHTML = s.innerHTML * 1 - 1;
+		
+	}
+	
+}
+$(window).load(function(){
+	$("#progress").html(100);
+	window.setTimeout("$(\".sweep_loading\").css(\"display\",\"none\");", 1000);
+})
+$(function(){
+	var images = new Array()
+            function preload() {
+                for (i = 0; i < preload.arguments.length; i++) {
+                    images[i] = new Image()
+                    images[i].src = preload.arguments[i]
+                   $("#progress").html(parseInt($("#progress").html())+parseInt(99/preload.arguments.length));
+             
+                }
+            }
+            preload(
+                "img/bg.png",
+                "img/bei.png",
+                "img/circle.png",
+                "img/buttom_reg.png",
+                "img/bttom_gen.png",
+                "img/finy.png",
+                "img/ter.png"
+            )
+           
+    
+	$("#activity").click(function(){
+		var re = /^((13[0-9])|(14[5,7])|(15[^4,\D])|(17[0,6,7,8])|(18[0,1,3,5-9]))\d{8}$/i;
+		if($("#sweep_tel").val()==""||$("#sweep_tel").val()==null){
+			alert("亲，为了确保手机流量可以准确送到您的手机上，请先填写手机号码");
+		}else if(re.test($("#sweep_tel").val())){
+			$(".sweep_page2").css("display","block");
+		    time=window.setInterval("run();", 1000);
+		}else{
+			
+			alert("请填写正确的手机号");
+		}
+		
+	});
+	$("#time_bottom").click(function(){
+		$(".sweep_page3").css("display","none");
+		 time=window.setInterval("run();", 1000);
+	});
+	$(".sweep_button2").click(function(){
+		$(".sweep_page1_window").css("display","block");
+	});
+	$(".sweep_page1_window_back").click(function(){
+		$(".sweep_page1_window").css("display","none");
+	});
+})
+
+</script>
+</body>
+</html>
